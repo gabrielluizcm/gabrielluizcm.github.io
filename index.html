@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>Companion Monopoly</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="JS/main.js" type="text/javascript"></script>
+</head>
+
+<body>
+    Companion Monopoly<br>
+    <br>
+    Controle o seu dinheiro e de seus amigos de um jeito mais simples enquanto joga!<br>
+    Basta colocar o nome dos jogadores abaixo e usar os botões para as operações financeiras ;)<br>
+    <br>
+    <input type="text" id="nomej1">&emsp;--->&emsp;$<span id="valorJogador1">200</span>K<br>
+    <input type="text" id="nomej2">&emsp;--->&emsp;$<span id="valorJogador2">200</span>K<br><br>
+    <form name="formTransferencias"> 
+        <fieldset>
+            <legend>Transferências</legend>
+            <fieldset>
+                <legend>Transferir de:</legend>
+                <input type="radio" name="transferenciaOrigem" value='jogador1' required><span
+                    id='transfOrigem1'></span><br>
+                <input type="radio" name="transferenciaOrigem" value='jogador2' required><span
+                    id='transfOrigem2'></span><br>
+            </fieldset>
+            <fieldset>
+                <legend>Para:</legend>
+                <input type="radio" name="transferenciaDestino" value='jogador1' required><span
+                    id='transfDest1'></span><br>
+                <input type="radio" name="transferenciaDestino" value='jogador2' required><span
+                    id='transfDest2'></span><br>
+            </fieldset>
+            <fieldset>
+                <legend>A quantia de:</legend>
+                <input type="number" name="valorTransferencia" id="valorTransf" required>
+            </fieldset>
+            <br><input type="button" value="Transferir!" id='botaoTransferencia'>&emsp;<span id="foiTransferido"></span>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
