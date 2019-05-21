@@ -1,33 +1,120 @@
-$(document).ready(function(){
+$(document).ready(function () {
+    window.onbeforeunload = confirmarSaida
+
     document.getElementById('nomej1').addEventListener("input", copiaJg1)
     document.getElementById('nomej2').addEventListener("input", copiaJg2)
+    document.getElementById('nomej3').addEventListener("input", copiaJg3)
+    document.getElementById('nomej4').addEventListener("input", copiaJg4)
+    document.getElementById('nomej5').addEventListener("input", copiaJg5)
+    document.getElementById('nomej6').addEventListener("input", copiaJg6)
     document.getElementById('botaoTransferencia').addEventListener("click", realizarTransferencia)
+    document.getElementById('botaoDeposito').addEventListener("click", realizarDeposito)
+    document.getElementById('botaoPagamento').addEventListener("click", realizarPagamento)
 
-    function copiaJg1(evt)
-    {
+    function copiaJg1(evt) {
         document.getElementById('transfOrigem1').innerText = evt.target.value
         document.getElementById('transfDest1').innerText = evt.target.value
+        document.getElementById('deposito1').innerText = evt.target.value
+        document.getElementById('pagamento1').innerText = evt.target.value
     }
 
-    function copiaJg2(evt)
-    {
+    function copiaJg2(evt) {
         document.getElementById('transfOrigem2').innerText = evt.target.value
         document.getElementById('transfDest2').innerText = evt.target.value
+        document.getElementById('deposito2').innerText = evt.target.value
+        document.getElementById('pagamento2').innerText = evt.target.value
     }
 
-    function realizarTransferencia()
-    {
-        alert('entrou')
+    function copiaJg3(evt) {
+        document.getElementById('transfOrigem3').innerText = evt.target.value
+        document.getElementById('transfDest3').innerText = evt.target.value
+        document.getElementById('deposito3').innerText = evt.target.value
+        document.getElementById('pagamento3').innerText = evt.target.value
+    }
+
+    function copiaJg4(evt) {
+        document.getElementById('transfOrigem4').innerText = evt.target.value
+        document.getElementById('transfDest4').innerText = evt.target.value
+        document.getElementById('deposito4').innerText = evt.target.value
+        document.getElementById('pagamento4').innerText = evt.target.value
+    }
+
+    function copiaJg5(evt) {
+        document.getElementById('transfOrigem5').innerText = evt.target.value
+        document.getElementById('transfDest5').innerText = evt.target.value
+        document.getElementById('deposito5').innerText = evt.target.value
+        document.getElementById('pagamento5').innerText = evt.target.value
+    }
+
+    function copiaJg6(evt) {
+        document.getElementById('transfOrigem6').innerText = evt.target.value
+        document.getElementById('transfDest6').innerText = evt.target.value
+        document.getElementById('deposito6').innerText = evt.target.value
+        document.getElementById('pagamento6').innerText = evt.target.value
+    }
+
+    function realizarTransferencia() {
+        let radios, origem, destino, valor, i
         document.getElementById('foiTransferido').innerHTML = ''
-        try
-        {
-            if (document.getElementById('transferenciaOrigem') == null) throw 'Jogador de origem não selecionado!'
-            //let origem = document.getElementById('transferenciaOrigem').value
+        try {
+            radios = document.getElementsByName('transferenciaOrigem')
+            for (i = 0; i < radios.length; i++)
+                if (radios[i].checked)
+                    origem = radios[i].value
+            radios = document.getElementsByName('transferenciaDestino')
+            for (i = 0; i < radios.length; i++)
+                if (radios[i].checked)
+                    destino = radios[i].value
+            valor = parseInt(document.getElementById('valorTransf').value)
+            if (valor <= 0)
+                throw 'Valor de transferência nulo ou negativo!'
+            else
+                if (origem == destino)
+                    throw 'Jogadores de origem e destino iguais!'
+                else
+                {
+                    document.getElementById(destino).innerHTML = parseInt(document.getElementById(destino).innerHTML) + valor
+                    document.getElementById(origem).innerHTML = parseInt(document.getElementById(origem).innerHTML) - valor
+                    document.getElementById('foiTransferido').innerHTML = 'Transferência realizada com sucesso!'
+                }
         }
-        catch(err)
-        {
+        catch (err) {
             document.getElementById('foiTransferido').innerHTML = err + ' Transferência não realizada'
         }
     }
-    
+
+    function realizarDeposito()
+    {
+        let radio, destino, i, valor = parseInt(document.getElementById('valorDeposito').value)
+        radio = document.getElementsByName('deposito')
+        document.getElementById('foiDepositado').innerHTML = ""
+        for (i = 0; i < radio.length; i++)
+            if (radio[i].checked)
+            {
+                destino = radio[i].value
+                document.getElementById(destino).innerHTML = parseInt(document.getElementById(destino).innerHTML) + valor
+                document.getElementById('foiDepositado').innerHTML = "Deposito realizado com sucesso!"
+                break
+            }
+    }
+
+    function realizarPagamento()
+    {
+        let radio, origem, i, valor = parseInt(document.getElementById('valorPagamento').value)
+        radio = document.getElementsByName('pagamento')
+        document.getElementById('foiPago').innerHTML = ""
+        for (i = 0; i < radio.length; i++)
+            if (radio[i].checked)
+            {
+                origem = radio[i].value
+                document.getElementById(origem).innerHTML = parseInt(document.getElementById(origem).innerHTML) - valor
+                document.getElementById('foiPago').innerHTML = "Pagamento realizado com sucesso!"
+                break
+            }
+    }
+
+    function confirmarSaida()
+    {
+        return 0
+    }
 });
