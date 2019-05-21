@@ -1,4 +1,4 @@
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function () {
     window.onbeforeunload = confirmarSaida
 
     {   //Event Listeners
@@ -12,6 +12,11 @@ $(document).ready(function () {
         document.getElementById('botaoDeposito').addEventListener("click", realizarDeposito)
         document.getElementById('botaoPagamento').addEventListener("click", realizarPagamento)
         document.getElementById('confirmaJogadores').addEventListener("click", confirmarJogadores)
+        {   //botão de divs rebatíveis
+            let i, rebativeis = document.getElementsByClassName('rebativel')
+            for (i = 0; i < rebativeis.length; i++)
+                rebativeis[i].addEventListener("click", rebateDiv)
+        }
     }
 
     function copiaJg1(evt) {
@@ -58,7 +63,7 @@ $(document).ready(function () {
 
     function realizarTransferencia() {
         let radios, origem, destino, valor, i
-        document.getElementById('foiTransferido').innerHTML = ''
+        document.getElementById('foiTransferido').style.display = 'inline-block'
         try {
             radios = document.getElementsByName('transferenciaOrigem')
             for (i = 0; i < radios.length; i++)
@@ -83,12 +88,15 @@ $(document).ready(function () {
         catch (err) {
             document.getElementById('foiTransferido').innerHTML = err + ' Transferência não realizada'
         }
+        finally {
+            window.setTimeout(limpaConfirmacao, 2000)
+        }
     }
 
     function realizarDeposito() {
         let radio, destino, i, valor = parseInt(document.getElementById('valorDeposito').value)
         radio = document.getElementsByName('deposito')
-        document.getElementById('foiDepositado').innerHTML = ""
+        document.getElementById('foiDepositado').style.display = 'inline-block'
         for (i = 0; i < radio.length; i++)
             if (radio[i].checked) {
                 destino = radio[i].value
@@ -96,12 +104,13 @@ $(document).ready(function () {
                 document.getElementById('foiDepositado').innerHTML = "Deposito realizado com sucesso!"
                 break
             }
+        window.setTimeout(limpaConfirmacao, 2000)
     }
 
     function realizarPagamento() {
         let radio, origem, i, valor = parseInt(document.getElementById('valorPagamento').value)
         radio = document.getElementsByName('pagamento')
-        document.getElementById('foiPago').innerHTML = ""
+        document.getElementById('foiPago').style.display = 'inline-block'
         for (i = 0; i < radio.length; i++)
             if (radio[i].checked) {
                 origem = radio[i].value
@@ -109,6 +118,7 @@ $(document).ready(function () {
                 document.getElementById('foiPago').innerHTML = "Pagamento realizado com sucesso!"
                 break
             }
+        window.setTimeout(limpaConfirmacao, 2000)
     }
 
     function confirmarSaida() {
@@ -140,6 +150,9 @@ $(document).ready(function () {
                 radiosDep[1].disabled = true
                 radiosPag[1].disabled = true
             }
+            else
+                document.getElementById('valorJogador2').innerHTML = 2458
+
             if (document.getElementById('nomej3').value == '') {
                 document.getElementById('nomej3').disabled = true
                 radiosTransfOrigem[2].disabled = true
@@ -147,6 +160,9 @@ $(document).ready(function () {
                 radiosDep[2].disabled = true
                 radiosPag[2].disabled = true
             }
+            else
+                document.getElementById('valorJogador3').innerHTML = 2458
+
             if (document.getElementById('nomej4').value == '') {
                 document.getElementById('nomej4').disabled = true
                 radiosTransfOrigem[3].disabled = true
@@ -154,6 +170,9 @@ $(document).ready(function () {
                 radiosDep[3].disabled = true
                 radiosPag[3].disabled = true
             }
+            else
+                document.getElementById('valorJogador4').innerHTML = 2458
+
             if (document.getElementById('nomej5').value == '') {
                 document.getElementById('nomej5').disabled = true
                 radiosTransfOrigem[4].disabled = true
@@ -161,6 +180,9 @@ $(document).ready(function () {
                 radiosDep[4].disabled = true
                 radiosPag[4].disabled = true
             }
+            else
+                document.getElementById('valorJogador5').innerHTML = 2458
+
             if (document.getElementById('nomej6').value == '') {
                 document.getElementById('nomej6').disabled = true
                 radiosTransfOrigem[5].disabled = true
@@ -168,6 +190,31 @@ $(document).ready(function () {
                 radiosDep[5].disabled = true
                 radiosPag[5].disabled = true
             }
+            else
+                document.getElementById('valorJogador6').innerHTML = 2458
+        }
+    }
+
+    function limpaConfirmacao() {
+        let i, botoes
+        botoes = document.getElementsByClassName('confirmacao')
+        for (i = 0; i < botoes.length; i++)
+            botoes[i].style.display = 'none'
+    }
+
+    function rebateDiv(evt)
+    {
+        evt.target.classList.toggle('ativo')
+        div = evt.target.nextElementSibling
+        if (div.style.maxHeight)
+        {
+            div.style.maxHeight = null
+            div.style.paddingTop = '0';
+        }
+        else
+        {
+            div.style.maxHeight = div.scrollHeight + 'px'
+            div.style.paddingTop = '10px';
         }
     }
 });

@@ -5,30 +5,57 @@
     <title>Companion Monopoly</title>
     <link rel="icon" href="IMAGENS/monopoly.ico">
     <link rel="stylesheet" href="CSS/estilo.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="JS/main.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-    <div class="content">
-        <span class="titulo">Companion Monopoly</span><br>
-        <br>
-        Controle o seu dinheiro e de seus amigos de um jeito mais simples enquanto joga!<br>
-        Basta colocar o nome dos jogadores abaixo e usar os botões para as operações financeiras ;)<br>
-        <br>
-        <fieldset>
+
+    <span class="titulo">Companion Monopoly</span><br>
+    <br>
+    Controle o seu dinheiro e de seus amigos de um jeito mais simples enquanto joga!<br>
+    Basta colocar o nome dos jogadores abaixo e usar os botões para as operações financeiras ;)<br>
+    <br>
+    <div class="container">
+        <fieldset id="jogadores">
             <legend>Jogadores</legend>
-            <input type="text" id="nomej1" maxlength="15">&emsp;--->&emsp;$<span id="valorJogador1">-</span>K<br><br>
-            <input type="text" id="nomej2" maxlength="15">&emsp;--->&emsp;$<span id="valorJogador2">-</span>K<br><br>
-            <input type="text" id="nomej3" maxlength="15">&emsp;--->&emsp;$<span id="valorJogador3">-</span>K<br><br>
-            <input type="text" id="nomej4" maxlength="15">&emsp;--->&emsp;$<span id="valorJogador4">-</span>K<br><br>
-            <input type="text" id="nomej5" maxlength="15">&emsp;--->&emsp;$<span id="valorJogador5">-</span>K<br><br>
-            <input type="text" id="nomej6" maxlength="15">&emsp;--->&emsp;$<span id="valorJogador6">-</span>K<br><br>
-            <input type="button" id="confirmaJogadores" value="Confirmar jogadores">
+            <table id="tabelaJogadores">
+                <tr>
+                    <td><input type="text" id="nomej1" maxlength="15"></td>
+                    <td>&emsp;--->&emsp;</td>
+                    <td>$<span id="valorJogador1">-----</span>K</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="nomej2" maxlength="15"></td>
+                    <td>&emsp;--->&emsp;</td>
+                    <td>$<span id="valorJogador2">-----</span>K</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="nomej3" maxlength="15"></td>
+                    <td>&emsp;--->&emsp;</td>
+                    <td>$<span id="valorJogador3">-----</span>K</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="nomej4" maxlength="15"></td>
+                    <td>&emsp;--->&emsp;</td>
+                    <td>$<span id="valorJogador4">-----</span>K</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="nomej5" maxlength="15"></td>
+                    <td>&emsp;--->&emsp;</td>
+                    <td>$<span id="valorJogador5">-----</span>K</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="nomej6" maxlength="15"></td>
+                    <td>&emsp;--->&emsp;</td>
+                    <td>$<span id="valorJogador6">-----</span>K</td>
+                </tr>
+            </table>
+            <input type="button" id="confirmaJogadores" value="Confirmar jogadores" class="botao">
         </fieldset>
         <br>
-        <fieldset>
-            <legend>Transferências</legend>
+        <input type="button" class="rebativel" value="Transferências">
+        <div class="divRebativel">
             <fieldset>
                 <legend>Transferir de:</legend>
                 <input type="radio" name="transferenciaOrigem" value='valorJogador1' checked><span
@@ -56,13 +83,13 @@
             </fieldset>
             <fieldset>
                 <legend>A quantia de:</legend>
-                <input type="number" id="valorTransf" value="200" min="1">
+                $<input type="number" id="valorTransf" value="200" min="1" class="inputNumerico">K
             </fieldset>
-            <br><input type="button" value="Transferir!" id='botaoTransferencia'>&emsp;<span id="foiTransferido"></span>
-        </fieldset>
-        <br><br>
-        <fieldset>
-            <legend>Depósitos</legend>
+            <input type="button" value="Transferir!" id='botaoTransferencia' class="botao"><br><span id="foiTransferido"
+                class="confirmacao"></span>
+        </div>
+        <input type="button" class="rebativel" value="Depósitos">
+        <div class="divRebativel">
             <fieldset>
                 <legend>Depositar para:</legend>
                 <input type="radio" name="deposito" value='valorJogador1' checked><span id='deposito1'></span><br>
@@ -74,12 +101,13 @@
             </fieldset>
             <fieldset>
                 <legend>A quantia de:</legend>
-                <input type="number" id="valorDeposito" value="200" min="1">
+                $<input type="number" id="valorDeposito" value="200" min="1" class="inputNumerico">K
             </fieldset>
-            <br><input type="button" value="Depositar!" id="botaoDeposito">&emsp;<span id="foiDepositado"></span>
-        </fieldset>
-        <fieldset>
-            <legend>Pagamentos</legend>
+            <br><input type="button" value="Depositar!" id="botaoDeposito" class="botao"><br><span id="foiDepositado"
+                class="confirmacao"></span>
+        </div>
+        <input type="button" class="rebativel" value="Pagamentos">
+        <div class="divRebativel">
             <fieldset>
                 <legend>Debitar de:</legend>
                 <input type="radio" name="pagamento" value='valorJogador1' checked><span id='pagamento1'></span><br>
@@ -91,10 +119,11 @@
             </fieldset>
             <fieldset>
                 <legend>A quantia de:</legend>
-                <input type="number" id="valorPagamento" value="200" min="1">
+                $<input type="number" id="valorPagamento" value="200" min="1" class="inputNumerico">K
             </fieldset>
-            <br><input type="button" value="Pagamento!" id="botaoPagamento">&emsp;<span id="foiPago"></span>
-        </fieldset>
+            <br><input type="button" value="Pagamento!" id="botaoPagamento" class="botao"><br><span id="foiPago"
+                class="confirmacao"></span>
+        </div>
     </div>
 </body>
 <footer>
