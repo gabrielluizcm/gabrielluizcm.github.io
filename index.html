@@ -1,80 +1,88 @@
+<!DOCTYPE html>
 <html>
 
 <head>
     <title>Companion Monopoly</title>
+    <link rel="icon" href="IMAGENS/monopoly.ico">
+    <link rel="stylesheet" href="CSS/estilo.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="JS/main.js" type="text/javascript"></script>
 </head>
 
 <body>
-    Companion Monopoly<br>
-    <br>
-    Controle o seu dinheiro e de seus amigos de um jeito mais simples enquanto joga!<br>
-    Basta colocar o nome dos jogadores abaixo e usar os botões para as operações financeiras ;)<br>
-    <br>
-    <fieldset>
-        <legend>Jogadores</legend>
-        <input type="text" id="nomej1">&emsp;--->&emsp;$<span id="valorJogador1">200</span>K<br><br>
-        <input type="text" id="nomej2">&emsp;--->&emsp;$<span id="valorJogador2">200</span>K<br><br>
-        <input type="text" id="nomej3">&emsp;--->&emsp;$<span id="valorJogador3">200</span>K<br><br>
-        <input type="text" id="nomej4">&emsp;--->&emsp;$<span id="valorJogador4">200</span>K<br><br>
-        <input type="text" id="nomej5">&emsp;--->&emsp;$<span id="valorJogador5">200</span>K<br><br>
-        <input type="text" id="nomej6">&emsp;--->&emsp;$<span id="valorJogador6">200</span>K<br><br>
-    </fieldset>
-    <br>
-    <fieldset>
-        <legend>Transferências</legend>
+    <div class="content">
+        <span class="titulo">Companion Monopoly</span><br>
+        <br>
+        Controle o seu dinheiro e de seus amigos de um jeito mais simples enquanto joga!<br>
+        Basta colocar o nome dos jogadores abaixo e usar os botões para as operações financeiras ;)<br>
+        <br>
         <fieldset>
-            <legend>Transferir de:</legend>
-            <input type="radio" name="transferenciaOrigem" value='valorJogador1' checked><span
-                id='transfOrigem1'></span><br>
-            <input type="radio" name="transferenciaOrigem" value='valorJogador2'><span id='transfOrigem2'></span><br>
-            <input type="radio" name="transferenciaOrigem" value='valorJogador3'><span id='transfOrigem3'></span><br>
-            <input type="radio" name="transferenciaOrigem" value='valorJogador4'><span id='transfOrigem4'></span><br>
-            <input type="radio" name="transferenciaOrigem" value='valorJogador5'><span id='transfOrigem5'></span><br>
-            <input type="radio" name="transferenciaOrigem" value='valorJogador6'><span id='transfOrigem6'></span><br>
+            <legend>Jogadores</legend>
+            <input type="text" id="nomej1" maxlength="15">&emsp;--->&emsp;$<span id="valorJogador1">-</span>K<br><br>
+            <input type="text" id="nomej2" maxlength="15">&emsp;--->&emsp;$<span id="valorJogador2">-</span>K<br><br>
+            <input type="text" id="nomej3" maxlength="15">&emsp;--->&emsp;$<span id="valorJogador3">-</span>K<br><br>
+            <input type="text" id="nomej4" maxlength="15">&emsp;--->&emsp;$<span id="valorJogador4">-</span>K<br><br>
+            <input type="text" id="nomej5" maxlength="15">&emsp;--->&emsp;$<span id="valorJogador5">-</span>K<br><br>
+            <input type="text" id="nomej6" maxlength="15">&emsp;--->&emsp;$<span id="valorJogador6">-</span>K<br><br>
+            <input type="button" id="confirmaJogadores" value="Confirmar jogadores">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Transferências</legend>
+            <fieldset>
+                <legend>Transferir de:</legend>
+                <input type="radio" name="transferenciaOrigem" value='valorJogador1' checked><span
+                    id='transfOrigem1'></span><br>
+                <input type="radio" name="transferenciaOrigem" value='valorJogador2'><span
+                    id='transfOrigem2'></span><br>
+                <input type="radio" name="transferenciaOrigem" value='valorJogador3'><span
+                    id='transfOrigem3'></span><br>
+                <input type="radio" name="transferenciaOrigem" value='valorJogador4'><span
+                    id='transfOrigem4'></span><br>
+                <input type="radio" name="transferenciaOrigem" value='valorJogador5'><span
+                    id='transfOrigem5'></span><br>
+                <input type="radio" name="transferenciaOrigem" value='valorJogador6'><span
+                    id='transfOrigem6'></span><br>
+            </fieldset>
+            <fieldset>
+                <legend>Para:</legend>
+                <input type="radio" name="transferenciaDestino" value='valorJogador1'><span id='transfDest1'></span><br>
+                <input type="radio" name="transferenciaDestino" value='valorJogador2' checked><span
+                    id='transfDest2'></span><br>
+                <input type="radio" name="transferenciaDestino" value='valorJogador3'><span id='transfDest3'></span><br>
+                <input type="radio" name="transferenciaDestino" value='valorJogador4'><span id='transfDest4'></span><br>
+                <input type="radio" name="transferenciaDestino" value='valorJogador5'><span id='transfDest5'></span><br>
+                <input type="radio" name="transferenciaDestino" value='valorJogador6'><span id='transfDest6'></span><br>
+            </fieldset>
+            <fieldset>
+                <legend>A quantia de:</legend>
+                <input type="number" id="valorTransf" value="200" min="1">
+            </fieldset>
+            <br><input type="button" value="Transferir!" id='botaoTransferencia'>&emsp;<span id="foiTransferido"></span>
+        </fieldset>
+        <br><br>
+        <fieldset>
+            <legend>Depósitos</legend>
+            <fieldset>
+                <legend>Depositar para:</legend>
+                <input type="radio" name="deposito" value='valorJogador1' checked><span id='deposito1'></span><br>
+                <input type="radio" name="deposito" value='valorJogador2'><span id='deposito2'></span><br>
+                <input type="radio" name="deposito" value='valorJogador3'><span id='deposito3'></span><br>
+                <input type="radio" name="deposito" value='valorJogador4'><span id='deposito4'></span><br>
+                <input type="radio" name="deposito" value='valorJogador5'><span id='deposito5'></span><br>
+                <input type="radio" name="deposito" value='valorJogador6'><span id='deposito6'></span><br>
+            </fieldset>
+            <fieldset>
+                <legend>A quantia de:</legend>
+                <input type="number" id="valorDeposito" value="200" min="1">
+            </fieldset>
+            <br><input type="button" value="Depositar!" id="botaoDeposito">&emsp;<span id="foiDepositado"></span>
         </fieldset>
         <fieldset>
-            <legend>Para:</legend>
-            <input type="radio" name="transferenciaDestino" value='valorJogador1'><span id='transfDest1'></span><br>
-            <input type="radio" name="transferenciaDestino" value='valorJogador2' checked><span
-                id='transfDest2'></span><br>
-            <input type="radio" name="transferenciaDestino" value='valorJogador3'><span id='transfDest3'></span><br>
-            <input type="radio" name="transferenciaDestino" value='valorJogador4'><span id='transfDest4'></span><br>
-            <input type="radio" name="transferenciaDestino" value='valorJogador5'><span id='transfDest5'></span><br>
-            <input type="radio" name="transferenciaDestino" value='valorJogador6'><span id='transfDest6'></span><br>
-        </fieldset>
-        <fieldset>
-            <legend>A quantia de:</legend>
-            <input type="number" id="valorTransf" value="200" min="1">
-        </fieldset>
-        <br><input type="button" value="Transferir!" id='botaoTransferencia'>&emsp;<span id="foiTransferido"></span>
-    </fieldset>
-    <br><br>
-    <fieldset>
-        <legend>Depósitos</legend>
-        <fieldset>
-            <legend>Depositar para:</legend>
-            <input type="radio" name="deposito" value='valorJogador1' checked><span
-                id='deposito1'></span><br>
-            <input type="radio" name="deposito" value='valorJogador2'><span id='deposito2'></span><br>
-            <input type="radio" name="deposito" value='valorJogador3'><span id='deposito3'></span><br>
-            <input type="radio" name="deposito" value='valorJogador4'><span id='deposito4'></span><br>
-            <input type="radio" name="deposito" value='valorJogador5'><span id='deposito5'></span><br>
-            <input type="radio" name="deposito" value='valorJogador6'><span id='deposito6'></span><br>
-        </fieldset>
-        <fieldset>
-            <legend>A quantia de:</legend>
-            <input type="number" id="valorDeposito" value="200" min="1">
-        </fieldset>
-        <br><input type="button" value="Depositar!" id="botaoDeposito">&emsp;<span id="foiDepositado"></span>
-    </fieldset>
-    <fieldset>
             <legend>Pagamentos</legend>
             <fieldset>
                 <legend>Debitar de:</legend>
-                <input type="radio" name="pagamento" value='valorJogador1' checked><span
-                    id='pagamento1'></span><br>
+                <input type="radio" name="pagamento" value='valorJogador1' checked><span id='pagamento1'></span><br>
                 <input type="radio" name="pagamento" value='valorJogador2'><span id='pagamento2'></span><br>
                 <input type="radio" name="pagamento" value='valorJogador3'><span id='pagamento3'></span><br>
                 <input type="radio" name="pagamento" value='valorJogador4'><span id='pagamento4'></span><br>
@@ -87,6 +95,10 @@
             </fieldset>
             <br><input type="button" value="Pagamento!" id="botaoPagamento">&emsp;<span id="foiPago"></span>
         </fieldset>
+    </div>
 </body>
+<footer>
+    Ícone da aba disponível em: <a href="https://www.iconspedia.com/icon/monopoly-grey-icon-47117.html">IconsPedia</a>
+</footer>
 
 </html>
