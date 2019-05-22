@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('botaoDeposito').addEventListener("click", realizarDeposito)
         document.getElementById('botaoPagamento').addEventListener("click", realizarPagamento)
         document.getElementById('confirmaJogadores').addEventListener("click", confirmarJogadores)
+        document.getElementById('abrirLicenca').addEventListener('click', abrePopup)
+        document.getElementById('botaoLicenca').addEventListener('click', fechaPopup)
         {   //botão de divs rebatíveis
             let i, rebativeis = document.getElementsByClassName('rebativel')
             for (i = 0; i < rebativeis.length; i++)
@@ -225,4 +227,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    function abrePopup()
+    {
+        document.getElementById('popupLicenca').style.display = 'block'
+    }
+
+    function fechaPopup()
+    {
+        document.getElementById('popupLicenca').style.display = 'none'
+    }
 });
