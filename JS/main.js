@@ -125,8 +125,14 @@ document.addEventListener('DOMContentLoaded', function () {
         return 0
     }
 
-    function confirmarJogadores() {
-        let radiosTransfOrigem, radiosTransfDest, radiosDep, radiosPag
+    function confirmarJogadores(evt) {
+        let radiosTransfOrigem, radiosTransfDest, radiosDep, radiosPag, rebativeis, i
+
+        rebativeis = document.getElementsByClassName('rebativel')
+        for(i = 0; i < rebativeis.length; i++)
+        {
+            rebativeis[i].disabled = false
+        }
 
         radiosTransfOrigem = document.getElementsByName('transferenciaOrigem')
         radiosTransfDest = document.getElementsByName('transferenciaDestino')
@@ -193,6 +199,7 @@ document.addEventListener('DOMContentLoaded', function () {
             else
                 document.getElementById('valorJogador6').innerHTML = 2458
         }
+        evt.target.disabled = true
     }
 
     function limpaConfirmacao() {
@@ -217,4 +224,5 @@ document.addEventListener('DOMContentLoaded', function () {
             div.style.paddingTop = '10px';
         }
     }
+
 });

@@ -8,4 +8,4 @@ This build will use HTML, CSS and JavaScript.
 # Português
 Uma GitHub Page que vai compilar simples assistentes para jogos como Monopoly, como parte de estudo em webdev e por interesse pessoal. Por hora o site será apenas PT-BR, mas em versões futuras o EN-US também estará disponível.
 
-Esse projeto usará HTML, CSS, JavaScript e jQuery.
+Esse projeto usará HTML, CSS, JavaScript.
