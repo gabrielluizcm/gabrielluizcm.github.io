@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+*
+{
+    box-sizing: border-box;
+}
+
 html
 {
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
     margin: 0;
     padding: 0;
     outline: none;
@@ -12,9 +18,8 @@ body
 {
     background-color: #bfdbae;
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: 1.5vw;
     text-align: center;
-    min-width: 800px;
     min-height: 100%;
     width: 100%;
     margin: 0;
@@ -22,6 +27,7 @@ body
     outline: none;
     position: relative;
     overflow: auto;
+    overflow-x: hidden;
 }
 
 input
@@ -35,8 +41,8 @@ footer
 {
     position: absolute; 
     bottom: 0px;
-    width: 100%;
-    height: 50px;
+    width: 100vw;
+    height: 8vh;
     background-color: darkgreen;
     text-align: left;
 }
@@ -106,8 +112,7 @@ a img:hover
 .container
 {
     display: inline-block;
-    width: 80%;
-    min-width: 800px;
+    width: 90%;
     min-height: 100%;
     margin: auto;
     position: relative;
@@ -116,11 +121,11 @@ a img:hover
 .botao
 {
     margin-top: 10px;
-    font-size:20px;
+    font-size: 2vw;
     font-family: 'Montserrat', sans-serif;
     background-color: #8fbc72;
     color: #c70000;
-    padding: 16px 32px;
+    padding: 1vw 2vw;
     border: none;
     border-radius: 12px;
     transition-duration: 0.2s;
@@ -147,14 +152,14 @@ a img:hover
 
 .rebativel
 {
-    width: 100%;
-    font-size:20px;
+    width: 30vw;
+    font-size: 2vw;
     font-family: 'Montserrat', sans-serif;
     background-color: #8fbc72;
     color: #c70000;
     transition-duration: 0.2s;
     border: none;
-    padding: 16px 32px;
+    padding: 1vw 2vw;
     margin-top: 10px;
     cursor: pointer;
 }
@@ -201,13 +206,18 @@ a img:hover
 {
     color: #c70000;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 2vw;
 }
 
 #tabelaJogadores
 {
     margin: auto;
     table-layout: fixed;
+}
+
+#tabelaJogadores input
+{
+    width: 15vw
 }
 
 #jogadores
@@ -219,12 +229,14 @@ a img:hover
 {
     width: 45%;
     float: left;
+    margin: auto;
 }
 
 #coluna2
 {
-    width:45%;
-    float:right;
+    width: 45%;
+    float: right;
+    margin: auto;
 }
 
 #footerEsquerda

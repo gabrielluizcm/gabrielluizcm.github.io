@@ -1,5 +1,27 @@
 document.addEventListener('DOMContentLoaded', function () {
     window.onbeforeunload = confirmarSaida
+    window.onload = responsiveness
+    window.onresize = responsiveness
+
+    function responsiveness()
+    {
+        var windowWidth = document.documentElement.clientWidth
+        var windowHeight = document.documentElement.clientHeight
+        console.log(windowWidth, windowHeight)
+
+        if (windowWidth < windowHeight)
+        {
+            document.getElementById('coluna1').style.cssFloat = 'none'
+            document.getElementById('coluna2').style.cssFloat = 'none'
+            document.getElementById('coluna2').style.paddingTop = '10px'
+        }
+        else
+        {
+            document.getElementById('coluna1').style.cssFloat = 'left'
+            document.getElementById('coluna2').style.cssFloat = 'right'
+            document.getElementById('coluna2').style.paddingTop = '0'
+        }
+    }
 
     {   //Event Listeners
         document.getElementById('nomej1').addEventListener("input", copiaJg1)
