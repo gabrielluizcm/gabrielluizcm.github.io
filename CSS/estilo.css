@@ -217,7 +217,8 @@ a img:hover
 
 #tabelaJogadores input
 {
-    width: 15vw
+    width: 15vw;
+    font-size: 2vw;
 }
 
 #jogadores
