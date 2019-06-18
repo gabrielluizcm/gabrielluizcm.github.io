@@ -14,22 +14,21 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('coluna1').style.cssFloat = 'none'
             document.getElementById('coluna2').style.cssFloat = 'none'
             document.getElementById('coluna2').style.paddingTop = '10px'
+            document.getElementById('coluna1').style.width = '65%'
+            document.getElementById('coluna2').style.width = '65%'
+
         }
         else
         {
             document.getElementById('coluna1').style.cssFloat = 'left'
             document.getElementById('coluna2').style.cssFloat = 'right'
             document.getElementById('coluna2').style.paddingTop = '0'
+            document.getElementById('coluna1').style.width = '45%'
+            document.getElementById('coluna2').style.width = '45%'
         }
     }
 
     {   //Event Listeners
-        document.getElementById('nomej1').addEventListener("input", copiaJg1)
-        document.getElementById('nomej2').addEventListener("input", copiaJg2)
-        document.getElementById('nomej3').addEventListener("input", copiaJg3)
-        document.getElementById('nomej4').addEventListener("input", copiaJg4)
-        document.getElementById('nomej5').addEventListener("input", copiaJg5)
-        document.getElementById('nomej6').addEventListener("input", copiaJg6)
         document.getElementById('botaoTransferencia').addEventListener("click", realizarTransferencia)
         document.getElementById('botaoDeposito').addEventListener("click", realizarDeposito)
         document.getElementById('botaoPagamento').addEventListener("click", realizarPagamento)
@@ -43,46 +42,46 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    function copiaJg1(evt) {
-        document.getElementById('transfOrigem1').innerText = evt.target.value
-        document.getElementById('transfDest1').innerText = evt.target.value
-        document.getElementById('deposito1').innerText = evt.target.value
-        document.getElementById('pagamento1').innerText = evt.target.value
+    function copiaJg1() {
+        document.getElementById('transfOrigem1').innerText = document.getElementById('nomej1').value
+        document.getElementById('transfDest1').innerText = document.getElementById('nomej1').value
+        document.getElementById('deposito1').innerText = document.getElementById('nomej1').value
+        document.getElementById('pagamento1').innerText = document.getElementById('nomej1').value
     }
 
-    function copiaJg2(evt) {
-        document.getElementById('transfOrigem2').innerText = evt.target.value
-        document.getElementById('transfDest2').innerText = evt.target.value
-        document.getElementById('deposito2').innerText = evt.target.value
-        document.getElementById('pagamento2').innerText = evt.target.value
+    function copiaJg2() {
+        document.getElementById('transfOrigem2').innerText = document.getElementById('nomej2').value
+        document.getElementById('transfDest2').innerText = document.getElementById('nomej2').value
+        document.getElementById('deposito2').innerText = document.getElementById('nomej2').value
+        document.getElementById('pagamento2').innerText = document.getElementById('nomej2').value
     }
 
-    function copiaJg3(evt) {
-        document.getElementById('transfOrigem3').innerText = evt.target.value
-        document.getElementById('transfDest3').innerText = evt.target.value
-        document.getElementById('deposito3').innerText = evt.target.value
-        document.getElementById('pagamento3').innerText = evt.target.value
+    function copiaJg3() {
+        document.getElementById('transfOrigem3').innerText = document.getElementById('nomej3').value
+        document.getElementById('transfDest3').innerText = document.getElementById('nomej3').value
+        document.getElementById('deposito3').innerText = document.getElementById('nomej3').value
+        document.getElementById('pagamento3').innerText = document.getElementById('nomej3').value
     }
 
-    function copiaJg4(evt) {
-        document.getElementById('transfOrigem4').innerText = evt.target.value
-        document.getElementById('transfDest4').innerText = evt.target.value
-        document.getElementById('deposito4').innerText = evt.target.value
-        document.getElementById('pagamento4').innerText = evt.target.value
+    function copiaJg4() {
+        document.getElementById('transfOrigem4').innerText = document.getElementById('nomej4').value
+        document.getElementById('transfDest4').innerText = document.getElementById('nomej4').value
+        document.getElementById('deposito4').innerText = document.getElementById('nomej4').value
+        document.getElementById('pagamento4').innerText = document.getElementById('nomej4').value
     }
 
-    function copiaJg5(evt) {
-        document.getElementById('transfOrigem5').innerText = evt.target.value
-        document.getElementById('transfDest5').innerText = evt.target.value
-        document.getElementById('deposito5').innerText = evt.target.value
-        document.getElementById('pagamento5').innerText = evt.target.value
+    function copiaJg5() {
+        document.getElementById('transfOrigem5').innerText = document.getElementById('nomej5').value
+        document.getElementById('transfDest5').innerText = document.getElementById('nomej5').value
+        document.getElementById('deposito5').innerText = document.getElementById('nomej5').value
+        document.getElementById('pagamento5').innerText = document.getElementById('nomej5').value
     }
 
-    function copiaJg6(evt) {
-        document.getElementById('transfOrigem6').innerText = evt.target.value
-        document.getElementById('transfDest6').innerText = evt.target.value
-        document.getElementById('deposito6').innerText = evt.target.value
-        document.getElementById('pagamento6').innerText = evt.target.value
+    function copiaJg6() {
+        document.getElementById('transfOrigem6').innerText = document.getElementById('nomej6').value
+        document.getElementById('transfDest6').innerText = document.getElementById('nomej5').value
+        document.getElementById('deposito6').innerText = document.getElementById('nomej5').value
+        document.getElementById('pagamento6').innerText = document.getElementById('nomej5').value
     }
 
     function realizarTransferencia() {
@@ -152,6 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function confirmarJogadores(evt) {
         let radiosTransfOrigem, radiosTransfDest, radiosDep, radiosPag, rebativeis, i
 
+
         rebativeis = document.getElementsByClassName('rebativel')
         for(i = 0; i < rebativeis.length; i++)
         {
@@ -162,6 +162,9 @@ document.addEventListener('DOMContentLoaded', function () {
         radiosTransfDest = document.getElementsByName('transferenciaDestino')
         radiosDep = document.getElementsByName('deposito')
         radiosPag = document.getElementsByName('pagamento')
+
+
+
         {   //Verificando as entradas de texto e desativando seus correspondentes se vazias
             if (document.getElementById('nomej1').value == '') {
                 document.getElementById('nomej1').disabled = true
@@ -171,7 +174,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 radiosPag[0].disabled = true
             }
             else
+            {
                 document.getElementById('valorJogador1').innerHTML = 2458
+                copiaJg1()
+            }
 
             if (document.getElementById('nomej2').value == '') {
                 document.getElementById('nomej2').disabled = true
@@ -181,7 +187,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 radiosPag[1].disabled = true
             }
             else
+            {
                 document.getElementById('valorJogador2').innerHTML = 2458
+                copiaJg2()
+            }
 
             if (document.getElementById('nomej3').value == '') {
                 document.getElementById('nomej3').disabled = true
@@ -191,7 +200,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 radiosPag[2].disabled = true
             }
             else
+            {
                 document.getElementById('valorJogador3').innerHTML = 2458
+                copiaJg3()
+            }
 
             if (document.getElementById('nomej4').value == '') {
                 document.getElementById('nomej4').disabled = true
@@ -201,7 +213,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 radiosPag[3].disabled = true
             }
             else
+            {
                 document.getElementById('valorJogador4').innerHTML = 2458
+                copiaJg4()
+            }
 
             if (document.getElementById('nomej5').value == '') {
                 document.getElementById('nomej5').disabled = true
@@ -211,7 +226,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 radiosPag[4].disabled = true
             }
             else
+            {
                 document.getElementById('valorJogador5').innerHTML = 2458
+                copiaJg5()
+            }
 
             if (document.getElementById('nomej6').value == '') {
                 document.getElementById('nomej6').disabled = true
@@ -221,7 +239,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 radiosPag[5].disabled = true
             }
             else
+            {
                 document.getElementById('valorJogador6').innerHTML = 2458
+                copiaJg6()
+            }
         }
         evt.target.disabled = true
     }
@@ -240,12 +261,12 @@ document.addEventListener('DOMContentLoaded', function () {
         if (div.style.maxHeight)
         {
             div.style.maxHeight = null
-            div.style.paddingTop = '0';
+            div.style.padding = '0'
         }
         else
         {
             div.style.maxHeight = div.scrollHeight + 'px'
-            div.style.paddingTop = '10px';
+            div.style.padding = '0 16px 0 16px'
         }
     }
 

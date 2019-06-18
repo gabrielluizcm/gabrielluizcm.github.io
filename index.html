@@ -53,37 +53,37 @@
             <div class="divRebativel">
                 <fieldset>
                     <legend>Transferir de:</legend>
-                    <input type="radio" name="transferenciaOrigem" value='valorJogador1' checked><span
+                    <input type="radio" name="transferenciaOrigem" value='valorJogador1' class="radioBT" checked><span
                         id='transfOrigem1'></span><br>
-                    <input type="radio" name="transferenciaOrigem" value='valorJogador2'><span
+                    <input type="radio" name="transferenciaOrigem" value='valorJogador2' class="radioBT"><span
                         id='transfOrigem2'></span><br>
-                    <input type="radio" name="transferenciaOrigem" value='valorJogador3'><span
+                    <input type="radio" name="transferenciaOrigem" value='valorJogador3' class="radioBT"><span
                         id='transfOrigem3'></span><br>
-                    <input type="radio" name="transferenciaOrigem" value='valorJogador4'><span
+                    <input type="radio" name="transferenciaOrigem" value='valorJogador4' class="radioBT"><span
                         id='transfOrigem4'></span><br>
-                    <input type="radio" name="transferenciaOrigem" value='valorJogador5'><span
+                    <input type="radio" name="transferenciaOrigem" value='valorJogador5' class="radioBT"><span
                         id='transfOrigem5'></span><br>
-                    <input type="radio" name="transferenciaOrigem" value='valorJogador6'><span
+                    <input type="radio" name="transferenciaOrigem" value='valorJogador6' class="radioBT"><span
                         id='transfOrigem6'></span><br>
                 </fieldset>
                 <fieldset>
                     <legend>Para:</legend>
-                    <input type="radio" name="transferenciaDestino" value='valorJogador1'><span
+                    <input type="radio" name="transferenciaDestino" value='valorJogador1' class="radioBT"><span
                         id='transfDest1'></span><br>
-                    <input type="radio" name="transferenciaDestino" value='valorJogador2' checked><span
+                    <input type="radio" name="transferenciaDestino" value='valorJogador2' class="radioBT" checked><span
                         id='transfDest2'></span><br>
-                    <input type="radio" name="transferenciaDestino" value='valorJogador3'><span
+                    <input type="radio" name="transferenciaDestino" value='valorJogador3' class="radioBT"><span
                         id='transfDest3'></span><br>
-                    <input type="radio" name="transferenciaDestino" value='valorJogador4'><span
+                    <input type="radio" name="transferenciaDestino" value='valorJogador4' class="radioBT"><span
                         id='transfDest4'></span><br>
-                    <input type="radio" name="transferenciaDestino" value='valorJogador5'><span
+                    <input type="radio" name="transferenciaDestino" value='valorJogador5' class="radioBT"><span
                         id='transfDest5'></span><br>
-                    <input type="radio" name="transferenciaDestino" value='valorJogador6'><span
+                    <input type="radio" name="transferenciaDestino" value='valorJogador6' class="radioBT"><span
                         id='transfDest6'></span><br>
                 </fieldset>
                 <fieldset>
                     <legend>A quantia de:</legend>
-                    $<input type="number" id="valorTransf" value="200" min="1" class="inputNumerico">K
+                    $ <input type="number" id="valorTransf" value="200" min="1" maxlength="15" size="15" class="inputNumerico"> K
                 </fieldset>
                 <input type="button" value="Transferir!" id='botaoTransferencia' class="botao"><br><span
                     id="foiTransferido" class="confirmacao"></span>
@@ -101,7 +101,7 @@
                 </fieldset>
                 <fieldset>
                     <legend>A quantia de:</legend>
-                    $<input type="number" id="valorDeposito" value="200" min="1" class="inputNumerico">K
+                    $ <input type="number" id="valorDeposito" value="200" min="1" class="inputNumerico"> K
                 </fieldset>
                 <br><input type="button" value="Depositar!" id="botaoDeposito" class="botao"><br><span
                     id="foiDepositado" class="confirmacao"></span>
@@ -119,7 +119,7 @@
                 </fieldset>
                 <fieldset>
                     <legend>A quantia de:</legend>
-                    $<input type="number" id="valorPagamento" value="200" min="1" class="inputNumerico">K
+                    $ <input type="number" id="valorPagamento" value="200" min="1" class="inputNumerico"> K
                 </fieldset>
                 <br><input type="button" value="Pagamento!" id="botaoPagamento" class="botao"><br><span id="foiPago"
                     class="confirmacao"></span>
