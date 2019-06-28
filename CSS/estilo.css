@@ -12,11 +12,13 @@ html
     margin: 0;
     padding: 0;
     outline: none;
+    font-weight: bold;
 }
 
 body 
 {
-    background-color: #bfdbae;
+    background:  url("../IMAGENS/moneyBackground.png");
+    background-size: cover;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5vw;
     text-align: center;
@@ -43,7 +45,7 @@ footer
     bottom: 0px;
     width: 100vw;
     height: 8vh;
-    background-color: darkgreen;
+    background-color: rgba(0, 100, 0, 0.8);
     text-align: left;
 }
 
@@ -116,6 +118,10 @@ a img:hover
     min-height: 100%;
     margin: auto;
     position: relative;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 3vw;
+    padding-top: 1vw;
 }
 
 .botao
@@ -230,7 +236,7 @@ a img:hover
 #tabelaJogadores input
 {
     width: 25vw;
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 
 #jogadores
@@ -256,8 +262,8 @@ a img:hover
 {
     display: inline-block;
     position: absolute;
-    left: 5px;
-    top: 5px;
+    left: 1vw;
+    top: 1vh;
 }
 
 #footerDireita
