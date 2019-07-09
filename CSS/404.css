@@ -17,10 +17,11 @@ html
 
 body 
 {
-    background:  url("../IMAGENS/moneyBackground.png");
+    background:  url("../IMAGENS/404/fundo.png");
     background-size: cover;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5vw;
+    font-size: 2vw;
+    color: white;
     text-align: center;
     min-height: 100%;
     width: 100%;
@@ -41,11 +42,12 @@ input
 
 footer
 {
-    position: absolute; 
+    position: fixed; 
     bottom: 0px;
+    left: 0;
     width: 100vw;
     height: 8vh;
-    background-color: rgba(0, 100, 0, 0.8);
+    background-color: rgba(212, 212, 212, 0.8);
     text-align: left;
 }
 
@@ -70,9 +72,9 @@ a img:hover
 
 .popupContent
 {
-    position: relative;
+    position: sticky;
     background-color: #bfdbae;
-    margin: 10em auto;
+    margin: 60px auto; 
     padding: 10px;;
     border: #c70000 2px solid;
     max-width: 300px;
@@ -86,8 +88,8 @@ a img:hover
 .linksFooter
 {
     position: relative;
-    color: #c70000;
-    background-color: #8fbc72;
+    color: #000000;
+    background-color: #ffffff;
     padding: 8px 16px;
     text-align: center;
     text-decoration: none;
@@ -98,8 +100,8 @@ a img:hover
 
 .linksFooter:hover, .linksFooter:active
 {
-    background-color: #c70000;
-    color: #8fbc72;
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .linksDireita
@@ -118,7 +120,6 @@ a img:hover
     min-height: 100%;
     margin: auto;
     position: relative;
-    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 20px;
     padding: 3vw;
     padding-top: 1vw;
@@ -156,106 +157,11 @@ a img:hover
     cursor: not-allowed;
 }
 
-.radioBT
-{
-    width: 2vw;
-    height: 2vh;
-}
-
-.rebativel
-{
-    width: 100%;
-    font-size: 2vw;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #8fbc72;
-    color: #c70000;
-    transition-duration: 0.2s;
-    border: none;
-    padding: 1vw 2vw;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-.rebativel:focus
-{
-    outline: none;
-}
-.rebativel:hover, .ativo
-{
-    background-color: #c70000;
-    color: #8fbc72;
-}
-
-.rebativel:disabled, .rebativel:disabled:hover
-{
-    background-color: grey;
-    color: #c70000;
-    cursor: not-allowed;
-}
-
-.divRebativel
-{
-    margin: auto;
-    padding: 0 16px;
-    max-height: 0px;
-    overflow: hidden;
-    background-color: #bcffa6;
-    transition: max-height 0.4s ease-out;
-}
-
-.divRebativel input
-{
-    font-size: 2vw;
-}
-
-.inputNumerico
-{
-    text-align: right;
-    width: 100px;
-}
-
-.confirmacao
-{
-    display: inline-block;
-    transition-duration: 0.2s;
-}
-
 .titulo 
 {
-    color: #c70000;
+    color: white;
     font-weight: bold;
-    font-size: 2vw;
-}
-
-#tabelaJogadores
-{
-    margin: auto;
-    table-layout: fixed;
-}
-
-#tabelaJogadores input
-{
-    width: 25vw;
-    font-size: 1.5vw;
-}
-
-#jogadores
-{
-    margin-bottom: -15px;
-}
-
-#coluna1
-{
-    width: 45%;
-    float: left;
-    margin: auto;
-}
-
-#coluna2
-{
-    width: 45%;
-    float: right;
-    margin: auto;
+    font-size: 3vw;
 }
 
 #footerEsquerda
@@ -264,6 +170,7 @@ a img:hover
     position: absolute;
     left: 1vw;
     top: 1vh;
+    font-size: 1.5vw
 }
 
 #footerDireita
