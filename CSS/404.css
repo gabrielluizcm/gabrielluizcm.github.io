@@ -30,14 +30,7 @@ body
     outline: none;
     position: relative;
     overflow: auto;
-    overflow-x: hidden;
-}
-
-input
-{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    text-align: center;
+    overflow-y: hidden;
 }
 
 footer
@@ -108,7 +101,7 @@ a img:hover
 {
     position: relative;
     display: inline-block;
-    padding: 8px 8px;
+    padding: 8px 0.5vw;
     height: 10px;
     text-align: right;
 }
@@ -123,38 +116,6 @@ a img:hover
     border-radius: 20px;
     padding: 3vw;
     padding-top: 1vw;
-}
-
-.botao
-{
-    margin-top: 10px;
-    font-size: 2vw;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #8fbc72;
-    color: #c70000;
-    padding: 1vw 2vw;
-    border: none;
-    border-radius: 12px;
-    transition-duration: 0.2s;
-    cursor: pointer;
-}
-
-.botao:hover
-{
-    background-color: #c70000;
-    color: #8fbc72;
-}
-
-.botao:focus
-{
-    outline: 0;
-}
-
-.botao:disabled, .botao:disabled:hover
-{
-    background-color: grey;
-    color: #c70000;
-    cursor: not-allowed;
 }
 
 .titulo 
