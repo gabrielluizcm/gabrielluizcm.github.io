@@ -44,6 +44,11 @@ footer
     text-align: left;
 }
 
+a
+{
+    color: grey
+}
+
 a img:hover
 {
     transform: scale(1.2);
@@ -66,11 +71,12 @@ a img:hover
 .popupContent
 {
     position: sticky;
-    background-color: #bfdbae;
+    background-color: #1d1d1d;
     margin: 60px auto; 
     padding: 10px;;
-    border: #c70000 2px solid;
+    border: #b6b6b6 2px solid;
     max-width: 300px;
+    font-size: 1.5vw;
 }
 
 .popupContent a
@@ -124,6 +130,32 @@ a img:hover
     font-weight: bold;
     font-size: 3vw;
 }
+
+.botao
+{
+    margin-top: 10px;
+    font-size: 2vw;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 1vw 2vw;
+    border: none;
+    border-radius: 12px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.botao:hover
+{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.botao:focus
+{
+    outline: 0;
+}
+
 
 #footerEsquerda
 {

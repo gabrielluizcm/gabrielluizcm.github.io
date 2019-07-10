@@ -2,10 +2,10 @@
 <html>
 
 <head>
-    <title>Companion Monopoly</title>
-    <link rel="icon" href="IMAGENS/MONOPOLY/monopoly.ico">
-    <link rel="stylesheet" href="CSS/monopoly.css">
-    <script src="JS/monopoly.js" type="text/javascript"></script>
+    <title>Companion HUB</title>
+    <link rel="icon" href="IMAGENS/INDEX/icon.png">
+    <link rel="stylesheet" href="CSS/index.css">
+    <script src="JS/index.js" type="text/javascript"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
 </head>
@@ -13,215 +13,13 @@
 <body>
     <br>
     <div class="container">
-        <span class="titulo">Companion Monopoly</span><br><br>
-        Controle o seu dinheiro e de seus amigos de um jeito mais simples enquanto joga!<br>
-        Basta colocar o nome dos jogadores abaixo e usar os botões para as operações financeiras ;)<br><br>
-        <div id="coluna1">
-            <fieldset id="jogadores">
-                <legend>Jogadores</legend>
-                <table id="tabelaJogadores">
-                    <tr id="rownomej1">
-                        <td><input type="text" id="nomej1" maxlength="15" size="15" class="inputjogadores"></td>
-                        <td>$<span id="valorJogador1">0000</span>K</td>
-                    </tr>
-                    <tr id='rownomej2'>
-                        <td><input type="text" id="nomej2" maxlength="15" size="15" class="inputjogadores"></td>
-                        <td>$<span id="valorJogador2">0000</span>K</td>
-                    </tr>
-                    <tr id="rownomej3">
-                        <td><input type="text" id="nomej3" maxlength="15" size="15" class="inputjogadores"></td>
-                        <td>$<span id="valorJogador3">0000</span>K</td>
-                    </tr>
-                    <tr id="rownomej4">
-                        <td><input type="text" id="nomej4" maxlength="15" size="15" class="inputjogadores"></td>
-                        <td>$<span id="valorJogador4">0000</span>K</td>
-                    </tr>
-                    <tr id="rownomej5">
-                        <td><input type="text" id="nomej5" maxlength="15" size="15" class="inputjogadores"></td>
-                        <td>$<span id="valorJogador5">0000</span>K</td>
-                    </tr>
-                    <tr id="rownomej6">
-                        <td><input type="text" id="nomej6" maxlength="15" size="15" class="inputjogadores"></td>
-                        <td>$<span id="valorJogador6">0000</span>K</td>
-                    </tr>
-                    <tr id="rownomej7">
-                        <td><input type="text" id="nomej7" maxlength="15" size="15" class="inputjogadores"></td>
-                        <td>$<span id="valorJogador7">0000</span>K</td>
-                    </tr>
-                    <tr id="rownomej8">
-                        <td><input type="text" id="nomej8" maxlength="15" size="15" class="inputjogadores"></td>
-                        <td>$<span id="valorJogador8">0000</span>K</td>
-                    </tr>
-                </table>
-                <input type="button" id="novoJogo" value="Novo jogo" class="botao">
-                <input type="button" id='carregarJogo' value="Carregar jogo" class="botao">
-            </fieldset>
-        </div>
-        <div id="coluna2">
-            <input type="button" class="rebativel" value="Transferências" disabled>
-            <div class="divRebativel">
-                <!--Origem da transferencia-->
-                <fieldset>
-                    <legend>Transferir de:</legend>
-                    <div id="divTransf1">
-                        <input type="radio" name="transferenciaOrigem" value='valorJogador1' class="radioBT"><span
-                            id='transfOrigem1'></span>
-                    </div>
-                    <div id="divTransf2">
-                        <input type="radio" name="transferenciaOrigem" value='valorJogador2' class="radioBT"><span
-                            id='transfOrigem2'></span>
-                    </div>
-                    <div id="divTransf3">
-                        <input type="radio" name="transferenciaOrigem" value='valorJogador3' class="radioBT"><span
-                            id='transfOrigem3'></span>
-                    </div>
-                    <div id="divTransf4">
-                        <input type="radio" name="transferenciaOrigem" value='valorJogador4' class="radioBT"><span
-                            id='transfOrigem4'></span>
-                    </div>
-                    <div id="divTransf5">
-                        <input type="radio" name="transferenciaOrigem" value='valorJogador5' class="radioBT"><span
-                            id='transfOrigem5'></span>
-                    </div>
-                    <div id="divTransf6">
-                        <input type="radio" name="transferenciaOrigem" value='valorJogador6' class="radioBT"><span
-                            id='transfOrigem6'></span>
-                    </div>
-                    <div id="divTransf7">
-                        <input type="radio" name="transferenciaOrigem" value='valorJogador7' class="radioBT"><span
-                            id='transfOrigem7'></span>
-                    </div>
-                    <div id="divTransf8">
-                        <input type="radio" name="transferenciaOrigem" value='valorJogador8' class="radioBT"><span
-                            id='transfOrigem8'></span>
-                    </div>
-                </fieldset>
-                <!--Destino da transferencia-->
-                <fieldset>
-                    <legend>Para:</legend>
-                    <div id="divDest1">
-                        <input type="radio" name="transferenciaDestino" value='valorJogador1' class="radioBT"><span
-                            id='transfDest1'></span>
-                    </div>
-                    <div id="divDest2">
-                        <input type="radio" name="transferenciaDestino" value='valorJogador2' class="radioBT"><span
-                            id='transfDest2'></span>
-                    </div>
-                    <div id="divDest3">
-                        <input type="radio" name="transferenciaDestino" value='valorJogador3' class="radioBT"><span
-                            id='transfDest3'></span>
-                    </div>
-                    <div id="divDest4">
-                        <input type="radio" name="transferenciaDestino" value='valorJogador4' class="radioBT"><span
-                            id='transfDest4'></span>
-                    </div>
-                    <div id="divDest5">
-                        <input type="radio" name="transferenciaDestino" value='valorJogador5' class="radioBT"><span
-                            id='transfDest5'></span>
-                    </div>
-                    <div id="divDest6">
-                        <input type="radio" name="transferenciaDestino" value='valorJogador6' class="radioBT"><span
-                            id='transfDest6'></span>
-                    </div>
-                    <div id="divDest7">
-                        <input type="radio" name="transferenciaDestino" value='valorJogador7' class="radioBT"><span
-                            id='transfDest7'></span>
-                    </div>
-                    <div id="divDest8">
-                        <input type="radio" name="transferenciaDestino" value='valorJogador8' class="radioBT"><span
-                            id='transfDest8'></span>
-                    </div>
-                </fieldset>
-                <!--Quantidade da transferencia-->
-                <fieldset>
-                    <legend>A quantia de:</legend>
-                    $ <input type="number" id="valorTransf" value="200" min="1" maxlength="15" size="15"
-                        class="inputNumerico"> K
-                </fieldset>
-                <input type="button" value="Transferir!" id='botaoTransferencia' class="botao"><br><span
-                    id="foiTransferido" class="confirmacao"></span>
-            </div>
-            <input type="button" class="rebativel" value="Depósitos" disabled>
-            <div class="divRebativel">
-                <!--Deposito-->
-                <fieldset>
-                    <legend>Depositar para:</legend>
-                    <div id="depositoR1">
-                        <input type="radio" name="deposito" value='valorJogador1' class="radioBT"><span id='deposito1'></span>
-                    </div>
-                    <div id="depositoR2">
-                        <input type="radio" name="deposito" value='valorJogador2' class="radioBT"><span id='deposito2'></span>
-                    </div>
-                    <div id="depositoR3">
-                        <input type="radio" name="deposito" value='valorJogador3' class="radioBT"><span id='deposito3'></span>
-                    </div>
-                    <div id="depositoR4">
-                        <input type="radio" name="deposito" value='valorJogador4' class="radioBT"><span id='deposito4'></span>
-                    </div>
-                    <div id="depositoR5">
-                        <input type="radio" name="deposito" value='valorJogador5' class="radioBT"><span id='deposito5'></span>
-                    </div>
-                    <div id="depositoR6">
-                        <input type="radio" name="deposito" value='valorJogador6' class="radioBT"><span id='deposito6'></span>
-                    </div>
-                    <div id="depositoR7">
-                        <input type="radio" name="deposito" value='valorJogador7' class="radioBT"><span id='deposito7'></span>
-                    </div>
-                    <div id="depositoR8">
-                        <input type="radio" name="deposito" value='valorJogador8' class="radioBT"><span id='deposito8'></span>
-                    </div>
-                </fieldset>
-                <!--Quantia deposito-->
-                <fieldset>
-                    <legend>A quantia de:</legend>
-                    $ <input type="number" id="valorDeposito" value="200" min="1" class="inputNumerico"> K
-                </fieldset>
-                <input type="button" value="Depositar!" id="botaoDeposito" class="botao"><br><span id="foiDepositado"
-                    class="confirmacao"></span>
-            </div>
-            <input type="button" class="rebativel" value="Pagamentos" disabled>
-            <div class="divRebativel">
-                <!--Debito-->
-                <fieldset>
-                    <legend>Debitar de:</legend>
-                    <div id="debito1">
-                        <input type="radio" name="pagamento" value='valorJogador1' class="radioBT"><span id='pagamento1'></span>
-                    </div>
-                    <div id="debito2">
-                        <input type="radio" name="pagamento" value='valorJogador2' class="radioBT"><span id='pagamento2'></span>
-                    </div>
-                    <div id="debito3">
-                        <input type="radio" name="pagamento" value='valorJogador3' class="radioBT"><span id='pagamento3'></span>
-                    </div>
-                    <div id="debito4">
-                        <input type="radio" name="pagamento" value='valorJogador4' class="radioBT"><span id='pagamento4'></span>
-                    </div>
-                    <div id="debito5">
-                        <input type="radio" name="pagamento" value='valorJogador5' class="radioBT"><span id='pagamento5'></span>
-                    </div>
-                    <div id="debito6">
-                        <input type="radio" name="pagamento" value='valorJogador6' class="radioBT"><span id='pagamento6'></span>
-                    </div>
-                    <div id="debito7">
-                        <input type="radio" name="pagamento" value='valorJogador7' class="radioBT"><span id='pagamento7'></span>
-                    </div>
-                    <div id="debito8">
-                        <input type="radio" name="pagamento" value='valorJogador8' class="radioBT"><span id='pagamento8'></span>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <legend>A quantia de:</legend>
-                    $ <input type="number" id="valorPagamento" value="200" min="1" class="inputNumerico"> K
-                </fieldset>
-                <input type="button" value="Pagamento!" id="botaoPagamento" class="botao"><br><span id="foiPago"
-                    class="confirmacao"></span>
-            </div>
-        </div>
-    </div>
+        <p><span class="titulo">O que vamos jogar hoje?</span></p>
+        <p>Só clicar no botão do jogo que desejar!</p>
+        <p><a href="monopoly.html" class="botaoHUB">Monopoly</a></p>
+        <p><a href="#" class="botaoHUBDisabled">Quartz - Em desenvolvimento</a></p>
+        <p><a href="#" class="botaoHUBDisabled">Em desenvolvimento</a></p>
     <footer>
         <div id="footerEsquerda">
-            <a href="https://estrela.vteximg.com.br/arquivos/Manual-Banco-Imobiliario-App.pdf?v=636625986476900000"
-                class="linksFooter" target="blank" title="Manual oficial em português">Manual do Jogo</a>
             <a href="#" class="linksFooter" title="Licença de uso" id="abrirLicenca">Licença</a></div>
         <div id="footerDireita">
             <a href="http://instagram.com/naooanjo" target="blank" class="linksDireita"><img
@@ -237,6 +35,8 @@
     <div class="popup" id="popupLicenca">
         <div class="popupContent">
             Icones cedidos por:<br><br>
+            <a href="https://www.flaticon.com/authors/twitter" title="Twitter">Twitter</a> do 
+            <a href="https://www.flaticon.com/" title="Flaticon">Flaticon</a><br>
             <a href="http://www.freepik.com" title="Freepik">Freepik</a> do <a href="http://www.flaticon.com"
                 title="Flaticon">Flaticon</a><br>
             <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> do <a
@@ -246,12 +46,8 @@
             pela licença de <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"
                 target="_blank">Creative Commons</a><br><br>
             Background cedido por:
-            <a
-                href="https://pixabay.com/users/PublicDomainPictures-14/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=163497">PublicDomainPictures</a>
-            do <a
-                href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=163497">Pixabay</a>
-            <br>
-            <input type="button" class="botao" id="botaoLicenca" value="Entendido">
+            Imagem de <a href="https://pixabay.com/pt/users/DarkWorkX-1664300/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4291517">DarkWorkX</a> por <a href="https://pixabay.com/pt/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4291517">Pixabay</a>
+            <br><input type="button" class="botao" id="botaoLicenca" value="Entendido">
         </div>
     </div>
 </body>

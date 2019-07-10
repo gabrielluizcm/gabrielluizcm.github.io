@@ -17,11 +17,12 @@ html
 
 body 
 {
-    background:  url("../IMAGENS/MONOPOLY/moneyBackground.png");
+    background:  url("../IMAGENS/INDEX/fundo.png");
     background-position: center;
     background-size: cover;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5vw;
+    font-size: 2vw;
+    color: rgb(27, 0, 124);
     text-align: center;
     min-height: 100%;
     width: 100%;
@@ -30,24 +31,23 @@ body
     outline: none;
     position: relative;
     overflow: auto;
-    overflow-x: hidden;
-}
-
-input
-{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    text-align: center;
+    overflow-y: hidden;
 }
 
 footer
 {
-    position: absolute; 
+    position: fixed; 
     bottom: 0px;
+    left: 0;
     width: 100vw;
     height: 8vh;
-    background-color: rgba(0, 100, 0, 0.8);
+    background-color: rgba(50, 20, 255, 0.5);
     text-align: left;
+}
+
+a
+{
+    color: grey;
 }
 
 a img:hover
@@ -71,13 +71,14 @@ a img:hover
 
 .popupContent
 {
+    color: white;
     position: sticky;
-    background-color: #bfdbae;
-    margin: 60px auto;
+    background-color: rgb(8, 0, 37);
+    margin: 60px auto; 
     padding: 10px;;
-    border: #c70000 2px solid;
+    border: #b6b6b6 2px solid;
     max-width: 300px;
-    font-size: 1.5vw
+    font-size: 1.5vw;
 }
 
 .popupContent a
@@ -88,8 +89,8 @@ a img:hover
 .linksFooter
 {
     position: relative;
-    color: #c70000;
-    background-color: #8fbc72;
+    color: #617c00;
+    background-color: rgb(27, 0, 124);
     padding: 8px 16px;
     text-align: center;
     text-decoration: none;
@@ -100,8 +101,8 @@ a img:hover
 
 .linksFooter:hover, .linksFooter:active
 {
-    background-color: #c70000;
-    color: #8fbc72;
+    background-color: #617c00;
+    color: rgb(27, 0, 124);
 }
 
 .linksDireita
@@ -120,10 +121,16 @@ a img:hover
     min-height: 100%;
     margin: auto;
     position: relative;
-    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 20px;
     padding: 3vw;
     padding-top: 1vw;
+}
+
+.titulo 
+{
+    color: rgb(27, 0, 124);
+    font-weight: bold;
+    font-size: 3vw;
 }
 
 .botao
@@ -131,8 +138,8 @@ a img:hover
     margin-top: 10px;
     font-size: 2vw;
     font-family: 'Montserrat', sans-serif;
-    background-color: #8fbc72;
-    color: #c70000;
+    background-color: #ffffff;
+    color: #000000;
     padding: 1vw 2vw;
     border: none;
     border-radius: 12px;
@@ -142,8 +149,8 @@ a img:hover
 
 .botao:hover
 {
-    background-color: #c70000;
-    color: #8fbc72;
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .botao:focus
@@ -151,113 +158,39 @@ a img:hover
     outline: 0;
 }
 
-.botao:disabled, .botao:disabled:hover
+.botaoHUB
 {
-    background-color: grey;
-    color: #c70000;
-    cursor: not-allowed;
-}
-
-.radioBT
-{
-    width: 2vw;
-    height: 2vh;
-}
-
-.rebativel
-{
-    width: 100%;
-    font-size: 2vw;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #8fbc72;
-    color: #c70000;
-    transition-duration: 0.2s;
-    border: none;
-    padding: 1vw 2vw;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-.rebativel:focus
-{
-    outline: none;
-}
-.rebativel:hover, .ativo
-{
-    background-color: #c70000;
-    color: #8fbc72;
-}
-
-.rebativel:disabled, .rebativel:disabled:hover
-{
-    background-color: grey;
-    color: #c70000;
-    cursor: not-allowed;
-}
-
-.divRebativel
-{
-    margin: auto;
-    padding: 0 16px;
-    max-height: 0px;
-    overflow: hidden;
-    background-color: #bcffa6;
-    transition: max-height 0.4s ease-out;
-}
-
-.divRebativel input
-{
-    font-size: 2vw;
-}
-
-.inputNumerico
-{
-    text-align: right;
-    width: 100px;
-}
-
-.confirmacao
-{
+    position: relative;
+    color: #617c00;
+    background-color: rgb(27, 0, 124);
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
     transition-duration: 0.2s;
+    border-radius: 12px;
+    font-size: 2.5vw
 }
 
-.titulo 
+.botaoHUB:hover
 {
-    color: #c70000;
-    font-weight: bold;
-    font-size: 2vw;
+    background-color: #617c00;
+    color: rgb(27, 0, 124);
 }
 
-#tabelaJogadores
+.botaoHUBDisabled, .botaoHUBDisabled:hover
 {
-    margin: auto;
-    table-layout: fixed;
-}
-
-#tabelaJogadores input
-{
-    width: 25vw;
-    font-size: 1.5vw;
-}
-
-#jogadores
-{
-    margin-bottom: -15px;
-}
-
-#coluna1
-{
-    width: 45%;
-    float: left;
-    margin: auto;
-}
-
-#coluna2
-{
-    width: 45%;
-    float: right;
-    margin: auto;
+    position: relative;
+    color: grey;
+    background-color: darkgrey;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.2s;
+    border-radius: 12px;
+    font-size: 2.5vw;
+    cursor: not-allowed;
 }
 
 #footerEsquerda
@@ -266,6 +199,7 @@ a img:hover
     position: absolute;
     left: 1vw;
     top: 1vh;
+    font-size: 1.5vw
 }
 
 #footerDireita
