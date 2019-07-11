@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function ()
         let botoes = document.getElementsByClassName('botao'), i
         let inputJogadores = document.getElementsByClassName('inputjogadores')
         let rebativeis = document.getElementsByClassName('rebativel')
-        console.log(windowWidth, windowHeight)
 
         document.body.style = windowWidth
         document.body.style = windowHeight
