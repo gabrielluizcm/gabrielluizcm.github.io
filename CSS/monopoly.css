@@ -15,6 +15,7 @@ html
     font-weight: bold;
 }
 
+
 body 
 {
     background:  url("../IMAGENS/MONOPOLY/moneyBackground.png");
@@ -45,7 +46,7 @@ footer
     position: absolute; 
     bottom: 0px;
     width: 100vw;
-    height: 8vh;
+    height: 60px;
     background-color: rgba(0, 100, 0, 0.8);
     text-align: left;
 }

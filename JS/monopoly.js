@@ -2,7 +2,8 @@ document.addEventListener('DOMContentLoaded', function ()
 {
     window.onbeforeunload = confirmarSaida
     window.onload = responsiveness
-    window.onresize = responsiveness
+    //window.onresize = responsiveness
+    screen.orientation.lock('portrait-primary')
 
     if (localStorage.length == 0)
         document.getElementById('carregarJogo').disabled = true
