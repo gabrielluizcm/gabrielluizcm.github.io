@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function ()
 {
     window.onbeforeunload = confirmarSaida
     window.onload = responsiveness
-    //window.onresize = responsiveness
+    window.onorientationchange = responsiveness
     screen.orientation.lock('portrait-primary')
 
     if (localStorage.length == 0)
