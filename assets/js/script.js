@@ -10,3 +10,7 @@ $(".icone").mouseenter(function(){
         marginBottom: 0
     }, 50);
 });
+
+$('#botaoModal').click(function() {
+    $('#modal0').modal('show')
+})
