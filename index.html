@@ -5,6 +5,7 @@
     <script src="https://kit.fontawesome.com/882791d228.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script type="text/javascript" src="assets/DateJS/date-pt-BR.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -23,7 +24,7 @@
             <div class="col"></div>
             <div class="col-8">
                 <h5 class="display-5 text-center">
-                    <p>WebDev FullStack, instrumentista e desenhista nas horas vagas, amante de jogos eletrônicos e de motos.</p>
+                    <p>WebDev BackEnd, instrumentista e desenhista nas horas vagas, amante de jogos eletrônicos e de motos.</p>
                     <p> Doutor num jogo de truco e mixólogo não-oficial das reuniões entre amigos.</p>
                 </h5>
             </div>
@@ -55,6 +56,17 @@
             </div>
         </div>
 
+        <div class="row" style="margin-top: 2em;">
+            <div class="col-12 text-center">
+                <h5 class="glow">
+                    Próximo Sextou em:
+                </h5>
+            </div>
+            <div class="col-12 text-center" style="margin-top: 1em">
+                <span id="countdown" class="h3" style="color: #992e63;"></span>
+            </div>
+        </div>
+
         <div class="modal fade" id="modal0" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
@@ -65,7 +77,10 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                    Ícones cedidos por <a href="http://fontawesome.com" target="blank">FontAwesome</a> sob a licença <a href="https://fontawesome.com/license/free" target="blank">Creative Commons 4.0</a>.
+                    <p>Ícones cedidos por <a href="http://fontawesome.com" target="blank">FontAwesome</a> sob a licença <a href="https://fontawesome.com/license/free" target="blank">Creative Commons 4.0</a>.</p>
+                    <p>Biblioteca <a href="https://github.com/datejs/Datejs" target="blank">DateJS</a> usada para cálculo do próximo Sextou.</p>
+                    <p>Algoritmo do <a href="https://www.w3schools.com/howto/howto_js_countdown.asp" target="blank">cálculo de data</a> e <a href="https://www.w3schools.com/howto/howto_css_glowing_text.asp" target="blank">CSS neon </a>
+                        cedido por <a href="https://www.w3schools.com" target="blank">W3Schools.</a></p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-primary" data-dismiss="modal">Entendido</button>
