@@ -34,11 +34,11 @@ setInterval(function () {
             }
             else {
                 if (horas > 1)
-                    $('#countdown').html('Quase lá! Faltam só ' + horas + " horas, " + minutos + " minutos e " + segundos + " segundos! (Sextou é válido após horário comercial")
+                    $('#countdown').html('Quase lá! Faltam só ' + horas + " horas, " + minutos + " minutos e " + segundos + " segundos! (Sextou é válido após horário comercial)")
                 else if (horas == 1)
-                    $('#countdown').html('Quase lá! Falta só ' + horas + " hora, " + minutos + " minutos e " + segundos + " segundos! (Sextou é válido após horário comercial")
+                    $('#countdown').html('Quase lá! Falta só ' + horas + " hora, " + minutos + " minutos e " + segundos + " segundos! (Sextou é válido após horário comercial)")
                 else
-                    $('#countdown').html('Quase lá! Faltam só ' + minutos + " minutos e " + segundos + " segundos! (Sextou é válido após horário comercial")
+                    $('#countdown').html('Quase lá! Faltam só ' + minutos + " minutos e " + segundos + " segundos! (Sextou é válido após horário comercial)")
             }
         }
         else
