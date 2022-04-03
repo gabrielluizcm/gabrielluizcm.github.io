@@ -6,113 +6,168 @@
     <script src="https://kit.fontawesome.com/882791d228.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script type="text/javascript" src="assets/DateJS/date-pt-BR.js"></script>
+    <link rel="stylesheet" href="src/css/index.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="src/js/index.js"></script>
 </head>
 
 <body>
     <div class="container-fluid">
-        <img class="background" src="assets/images/bg.png">
-        <div class="col-12 text-center">
-            <img class="portrait" src="assets/images/portrait.png">
-        </div>
-        <div class="col-12">
-            <h4 class="display-4 text-center">
-                Gabriel Luiz Carpes
-            </h4>
-        </div>
-        <div class="row">
-            <div class="col"></div>
-            <div class="col-8">
-                <h5 class="display-5 text-center">
-                    <p>WebDev BackEnd, instrumentista e desenhista nas horas vagas, amante de jogos eletrônicos e de
-                        motos.</p>
-                    <p> Doutor num jogo de truco e mixólogo não-oficial das reuniões entre amigos.</p>
-                </h5>
-            </div>
-            <div class="col"></div>
-        </div>
-        <div class="row icones">
-            <div class="col"></div>
-            <div class="col-2 col-lg-1 text-center">
-                <a target="blank" class="fab fa-github icone" href="http://github.com/gabrielluizcm"></a>
-            </div>
-            <div class="col-2 col-lg-1 text-center">
-                <a target="blank" class="fab fa-facebook icone" href="http://facebook.com/naooanjo"></a>
-            </div>
-            <div class="col-2 col-lg-1 text-center">
-                <a target="blank" class="fab fa-instagram icone" href="http://instagram.com/naooanjo"></a>
-            </div>
-            <div class="col-2 col-lg-1 text-center">
-                <a target="blank" class="fab fa-youtube icone"
-                    href="https://www.youtube.com/channel/UCVn8q8k3r00YGT8tRIWGpAg"></a>
-            </div>
-            <div class="col-2 col-lg-1 text-center">
-                <a target="blank" class="fas fa-envelope icone" href="mailto:gabrielluizcm@hotmail.com"></a>
-            </div>
-            <div class="col"></div>
-        </div>
-
-        <div class="row icones">
+        <div class="box">
             <div class="col-12 text-center">
-                <a class="fas fa-exclamation-circle icone" id="botaoModal"></a>
+                <img class="portrait" src="assets/images/portrait.jpg" alt="Profile picture">
+                <a class="fa fa-language icone"></a>
             </div>
-        </div>
+            <div class="col-12">
+                <h1 class="text-center">
+                    <span lang="en-US" class="hidden">Hi! My name is Gabriel Luiz!</span>
+                    <span lang="pt-BR" class="hidden">Olá! Meu nome é Gabriel Luiz!</span>
+                </h1>
+            </div>
+            <section class="row">
+                <div class="col"></div>
+                <div class="col-8">
+                    <h2 class="display-5 text-center">
+                        <p>
+                            <span lang="en-US" class="hidden">
+                                I'm a Fullstack Web Developer focused on backend && (APIs development
+                                || integration)
+                            </span>
+                            <span lang="pt-BR" class="hidden">
+                                Sou um WebDev Fullstack focado na parte de backend && desenvolvimento
+                                || integração de APIs
+                            </span>
+                        </p>
+                    </h2>
+                    <hr />
+                    <div class="row">
+                        <div class="col-sm-12 col-md-5">
+                            <h3>
+                                <span lang="en-US" class="hidden">Current major skills</span>
+                                <span lang="pt-BR" class="hidden">Skills principais atuais</span>
+                            </h3>
+                            <div class="halfUl">
+                                <ul>
+                                    <li><b>Back-end</b>
+                                        <ul>
+                                            <li>
+                                                <span lang="en-US" class="hidden">PHP with CodeIgniter Framework</span>
+                                                <span lang="pt-BR" class="hidden">PHP com Framework CodeIgniter</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><b>Front-end</b>
+                                        <ul>
+                                            <li>
+                                                <span lang="en-US" class="hidden">HTML5 and CSS3</span>
+                                                <span lang="pt-BR" class="hidden">HTML5 e CSS3</span>
+                                            </li>
+                                            <li>
+                                                <span lang="en-US" class="hidden">Raw JS and JQuery</span>
+                                                <span lang="pt-BR" class="hidden">JS puro e JQuery</span>
+                                            </li>
 
-        <div class="row" style="margin-top: 2em;">
-            <div class="col-12 text-center">
-                <h5 class="glow">
-                    Próximo Sextou em:
-                </h5>
-            </div>
-            <div class="col-12 text-center" style="margin-top: 1em">
-                <span id="countdown" class="h3" style="color: #992e63;"></span>
-            </div>
-        </div>
-
-        <div class="modal fade" id="modal0" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Licença</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+                                        </ul>
+                                    </li>
+                                    <li><b>Databases</b>
+                                        <ul>
+                                            <li>
+                                                <span lang="en-US" class="hidden">MySQL and other relational
+                                                    databases</span>
+                                                <span lang="pt-BR" class="hidden">MySQL e outros bancos
+                                                    relacionais</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col"></div>
+                        <div class="col-sm-12 col-md-5 text-right">
+                            <h3>
+                                <span lang="en-US" class="hidden">In learning major skills</span>
+                                <span lang="pt-BR" class="hidden">Skills principais em aprendizado</span>
+                            </h3>
+                            <div class="halfUl">
+                                <ul>
+                                    <li>
+                                        <b>Back-end</b>
+                                        <ul>
+                                            <li>Node.js</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <b>Front-end</b>
+                                        <ul>
+                                            <li>ReactJS</li>
+                                            <li>Next.js</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <b>Databases</b>
+                                        <ul>
+                                            <span lang="en-US" class="hidden">NoSQL databases</span>
+                                            <span lang="pt-BR" class="hidden">Bancos NoSQL</span>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        <p>Ícones cedidos por <a href="http://fontawesome.com" target="blank">FontAwesome</a> sob a
-                            licença <a href="https://fontawesome.com/license/free" target="blank">Creative Commons
-                                4.0</a>.</p>
-                        <p>Biblioteca <a href="https://github.com/datejs/Datejs" target="blank">DateJS</a> usada para
-                            cálculo do próximo Sextou.</p>
-                        <p>Algoritmo do <a href="https://www.w3schools.com/howto/howto_js_countdown.asp"
-                                target="blank">cálculo de data</a> e <a
-                                href="https://www.w3schools.com/howto/howto_css_glowing_text.asp" target="blank">CSS
-                                neon </a>
-                            cedido por <a href="https://www.w3schools.com" target="blank">W3Schools.</a></p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Entendido</button>
-                    </div>
+                    <hr />
                 </div>
-            </div>
+                <div class="col"></div>
+            </section>
+            <section class="row">
+                <div class="col-12 text-center">
+                    <h5>
+                        <span lang="en-US" class="hidden">Check my other networks:</span>
+                        <span lang="pt-BR" class="hidden">Dê uma olhada nas minhas outras redes:</span>
+                    </h5>
+                </div>
+                <div class="col"></div>
+                <div class="col-2 col-lg-1 text-center">
+                    <a target="blank" class="fab fa-github icone" href="http://github.com/gabrielluizcm"></a>
+                </div>
+                <div class="col-2 col-lg-1 text-center">
+                    <a target="blank" class="fab fa-instagram icone" href="http://instagram.com/naooanjo"></a>
+                </div>
+                <div class="col-2 col-lg-1 text-center">
+                    <a target="blank" class="fab fa-linkedin icone"
+                        href="https://www.linkedin.com/in/gabriel-luiz-carpes-2b5616152/"></a>
+                </div>
+                <div class="col-2 col-lg-1 text-center">
+                    <a target="blank" class="fas fa-envelope icone" href="mailto:gabrielluizcm@hotmail.com"></a>
+                </div>
+                <div class="col"></div>
+            </section>
+            <section class="row">
+                <div class="col-12 text-center">
+                    <h5>
+                        <span lang="en-US" class="hidden">You can also check my other projects:</span>
+                        <span lang="pt-BR" class="hidden">Também podes ver meus outros projetos:</span>
+                    </h5>
+                </div>
+                <div class="col-12 text-center projectLinksDiv">
+                    <a href="http://gabrielluizcm.github.io/checkList" class="projectLinks" target="_blank">
+                        CheckList
+                    </a>
+                    <a href="https://github.com/gabrielluizcm?tab=repositories" class="projectLinks" target="_blank">
+                        GitHub Repos
+                    </a>
+                </div>
+            </section>
+
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+                integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+                crossorigin="anonymous"></script>
         </div>
-
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <script src="assets/js/script.js"></script>
-
-    <footer><a target='_blank' href='http://gabrielluizcm.github.io/checkList'>CheckList App</a></footer>
 </body>
 
 </html>

@@ -1,7 +1,12 @@
 # gabrielluizcm@github.io
+## English
+Calling-card-like page on GitHub Pages built on HTML, CSS (BootStrap)
+and JavaScript.
+This branch will contain more detailed professional info and links for other
+portfolio applications.
 
-# English
-Calling-card-like page on GitHub Pages built on HTML, CSS and JavaScript, using Bootstrap framework and JQuery library.
-
-# Português
-Página em estilo cartão de visita no GitHub Pages construído em HTML, CSS e JavaScript, usando o framework Bootstrap e a biblioteca JQuery
+## Português
+Página em estilo cartão de visita no GitHub Pages construído em HTML, 
+CSS (BootStrap) e JavaScript.
+Esta branch vai conter informações profissionais mais detalhadas e links
+para outras aplicações portfólio.

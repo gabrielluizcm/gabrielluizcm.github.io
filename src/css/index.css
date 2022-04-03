@@ -1,0 +1,127 @@
+html {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    overflow-x: hidden;
+    font-size: 1em;
+    color: #A12568;
+    background-color: #2A0944;
+}
+
+.box {
+    background-color: #3B185F;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 1px solid #A12568;
+    padding: 15px 0;
+}
+
+.fa-language {
+    position: absolute;
+    right: 0.5em;
+}
+
+.container-fluid {
+    padding: 10px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: 1.3em;
+}
+
+h3 {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+hr {
+    border-color: #FEC260;
+    margin: 0.5rem 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.halfUl {
+    padding: 0 20px;
+}
+
+.skillsBox {
+    color: #FEC260;
+    background-color: #A125685f;
+    border-radius: 10px;
+    padding: 10px;
+    padding-bottom: 0;
+}
+
+a {
+    font-size: 40px;
+    text-decoration: none;
+    outline: 0;
+    color: #FEC260;
+    padding: 15px 0;
+}
+
+a:hover,
+a:active {
+    font-size: 40px;
+    outline: 0;
+    text-decoration: none;
+    color: #FEC260;
+}
+
+.portrait {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: solid black 5px;
+    box-shadow: inset 0 0 50px black;
+    margin-bottom: 20px;
+}
+
+.icone {
+    transition: transform .2s ease;
+    cursor: pointer;
+}
+
+.icone:hover {
+    transform: scale(1.1);
+}
+
+.projectLinksDiv {
+    margin-top: 1em;
+}
+
+.projectLinks {
+    background-color: #FEC2600f;
+    padding: 10px;
+    border-radius: 10%;
+    font-size: 1em;
+    font-weight: bold;
+    transition: font-size 0.2s ease;
+    position: relative;
+    margin: 0 10px;
+}
+
+.projectLinks:hover {
+    font-size: 1.1em;
+    border: #e60073 solid 1px;
+}
