@@ -108,6 +108,9 @@ a:active {
 
 .projectLinksDiv {
     margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .projectLinks {
@@ -118,7 +121,17 @@ a:active {
     font-weight: bold;
     transition: font-size 0.2s ease;
     position: relative;
-    margin: 0 10px;
+    margin: 5px 10px;
+}
+
+@media (min-width: 768px) {
+    .projectLinksDiv {
+        flex-direction: row;
+    }
+
+    .projectLinks {
+        margin: 0px 10px;
+    }
 }
 
 .projectLinks:hover {
