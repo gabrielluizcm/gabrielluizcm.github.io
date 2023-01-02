@@ -10,18 +10,89 @@ html {
 body {
     overflow-x: hidden;
     font-size: 1em;
-    color: #A12568;
+    color: rgb(236, 236, 236);
     background-color: #2A0944;
+    text-shadow: 1px 1px 1px black;
+}
+
+header {
+    position: relative;
+    height: 50px;
+    background-color: rgba(200, 100, 237, 0.44);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3vmax;
+    font-weight: bolder;
+}
+
+h2 {
+    font-size: 1.8vmax;
+}
+
+h3 {
+    font-size: 1.2vmax;
+    font-weight: bold;
+}
+
+hr {
+    border-color: #7903595f;
+    margin: 0.5rem 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    font-size: 40px;
+    text-decoration: none;
+    outline: 0;
+    color: rgb(236, 236, 236);
+    padding: 15px 0;
+}
+
+a:hover,
+a:active {
+    outline: 0;
+    text-decoration: none;
+    color: #A125685f;
+}
+
+.backgroundImage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    filter: blur(10px);
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/images/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.glass {
+    /* From https://css.glass */
+    background: rgba(200, 100, 237, 0.44);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.7px);
+    -webkit-backdrop-filter: blur(5.7px);
+    border: 1px solid rgba(200, 100, 237, 0.3);
 }
 
 .box {
-    background-color: #3B185F;
     height: 100%;
-    width: 90%;
+    width: 50%;
+    min-width: 300px;
     margin: 0 auto;
-    border-radius: 10px;
-    border: 1px solid #A12568;
-    padding: 15px 0;
+    margin-bottom: 15px;
+    padding: 15px 20px;
 }
 
 .fa-language {
@@ -37,29 +108,6 @@ body {
     display: none;
 }
 
-h1 {
-    font-size: 1.8em;
-}
-
-h2 {
-    font-size: 1.3em;
-}
-
-h3 {
-    font-size: 1em;
-    font-weight: bold;
-}
-
-hr {
-    border-color: #FEC260;
-    margin: 0.5rem 0;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
 .halfUl {
     padding: 0 20px;
 }
@@ -72,21 +120,6 @@ ul {
     padding-bottom: 0;
 }
 
-a {
-    font-size: 40px;
-    text-decoration: none;
-    outline: 0;
-    color: #FEC260;
-    padding: 15px 0;
-}
-
-a:hover,
-a:active {
-    font-size: 40px;
-    outline: 0;
-    text-decoration: none;
-    color: #FEC260;
-}
 
 .portrait {
     width: 150px;
@@ -103,6 +136,7 @@ a:active {
 }
 
 .icone:hover {
+    color: #A125685f;
     transform: scale(1.1);
 }
 
@@ -124,6 +158,15 @@ a:active {
     margin: 5px 10px;
 }
 
+.projectLinks:hover {
+    font-size: 1.1em;
+    border: #e60073 solid 1px;
+}
+
+.smallLinks {
+    font-size: inherit;
+}
+
 @media (min-width: 768px) {
     .projectLinksDiv {
         flex-direction: row;
@@ -132,9 +175,4 @@ a:active {
     .projectLinks {
         margin: 0px 10px;
     }
-}
-
-.projectLinks:hover {
-    font-size: 1.1em;
-    border: #e60073 solid 1px;
 }
