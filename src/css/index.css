@@ -20,7 +20,7 @@ main {
     display: flex;
     flex-direction: column;
     align-content: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 main p {
@@ -28,13 +28,14 @@ main p {
 }
 
 header {
-    position: relative;
+    position: sticky;
+    top: 0;
     height: 50px;
-    background-color: rgba(200, 100, 237, 0.44);
+    background-color: rgb(80, 29, 98);
     display: flex;
     align-content: center;
     justify-content: center;
-
+    z-index: 9999;
 }
 
 header a {
@@ -87,8 +88,8 @@ a:focus {
     left: -10px;
     top: 0px;
     filter: blur(10px);
-    width: 105%;
-    height: 105%;
+    width: 110%;
+    height: 110%;
     background-image: url('../../assets/images/bg.jpg');
     background-position: center;
     background-size: cover;
@@ -100,8 +101,8 @@ a:focus {
     left: -10px;
     top: 1000px;
     filter: blur(10px);
-    width: 105%;
-    height: 105%;
+    width: 110%;
+    height: 110%;
     background-image: url('../../assets/images/bg2.jpg');
     background-position: center;
     background-size: cover;
@@ -143,8 +144,6 @@ a:focus {
 
 .fa-arrow-circle-down {
     position: relative;
-    bottom: 10px;
-    margin-top: 1vh;
     font-size: 2em;
 }
 
