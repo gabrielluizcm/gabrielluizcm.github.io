@@ -15,6 +15,18 @@ body {
     text-shadow: 1px 1px 1px black;
 }
 
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+}
+
+main p {
+    font-size: 1.8vmax;
+}
+
 header {
     position: relative;
     height: 50px;
@@ -22,10 +34,11 @@ header {
     display: flex;
     align-content: center;
     justify-content: center;
+
 }
 
 header a {
-    margin: 0 10px;
+    margin: 0 2vw;
 }
 
 h1 {
@@ -34,11 +47,12 @@ h1 {
 }
 
 h2 {
-    font-size: 1.8vmax;
+    font-size: 2.5vmax;
+    font-weight: bold;
 }
 
 h3 {
-    font-size: 1.2vmax;
+    font-size: 2vmax;
     font-weight: bold;
 }
 
@@ -70,11 +84,11 @@ a:focus {
 
 .backgroundImage {
     position: absolute;
-    left: 0;
-    top: 0;
+    left: -10px;
+    top: 0px;
     filter: blur(10px);
-    width: 100%;
-    height: 100%;
+    width: 105%;
+    height: 105%;
     background-image: url('../../assets/images/bg.jpg');
     background-position: center;
     background-size: cover;
@@ -83,15 +97,19 @@ a:focus {
 
 .backgroundImage2 {
     position: absolute;
-    left: 0;
+    left: -10px;
     top: 1000px;
     filter: blur(10px);
-    width: 100%;
-    height: 100%;
+    width: 105%;
+    height: 105%;
     background-image: url('../../assets/images/bg2.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.container-fluid {
+    padding: 0;
 }
 
 .glass {
@@ -123,8 +141,11 @@ a:focus {
     transition: transform .2s ease;
 }
 
-.container-fluid {
-    padding: 5% 0;
+.fa-arrow-circle-down {
+    position: relative;
+    bottom: 10px;
+    margin-top: 1vh;
+    font-size: 2em;
 }
 
 .hidden {
@@ -192,6 +213,30 @@ a:focus {
     font-size: inherit;
 }
 
+.bounce2 {
+    animation: bounce2 2s ease infinite;
+}
+
+@keyframes bounce2 {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+
 @media (min-width: 768px) {
     .projectLinksDiv {
         flex-direction: row;
@@ -203,8 +248,7 @@ a:focus {
 }
 
 #landing {
-    margin-top: 5%;
-    margin-bottom: 10%;
+    height: initial;
 }
 
 #aboutme {
