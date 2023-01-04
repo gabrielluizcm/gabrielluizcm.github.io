@@ -96,19 +96,6 @@ a:focus {
     background-repeat: no-repeat;
 }
 
-.backgroundImage2 {
-    position: absolute;
-    left: -10px;
-    top: 1000px;
-    filter: blur(10px);
-    width: 110%;
-    height: 110%;
-    background-image: url('../../assets/images/bg2.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
 .container-fluid {
     padding: 0;
 }
