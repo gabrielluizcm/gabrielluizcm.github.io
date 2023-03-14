@@ -25,6 +25,7 @@
 
   function load() {
     loadLanguage();
+    hideLoadingPlaceholders();
     document.querySelector('.fa-language').addEventListener('click', toggleLang)
   }
 
@@ -34,6 +35,11 @@
       setPortugueseLang();
     else
       setEnglishLang();
+  }
+
+  function hideLoadingPlaceholders() {
+    const loadings = document.querySelectorAll('.loading');
+    loadings.forEach(loading => loading.classList.remove('loading'));
   }
 
   function toggleLang() {

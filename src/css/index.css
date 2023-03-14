@@ -119,6 +119,57 @@ a:focus {
     padding: 15px 20px;
 }
 
+.loading {
+    font-size: inherit;
+    text-decoration: none;
+    outline: 0;
+    padding: 0;
+    color: transparent;
+    text-shadow: none;
+    animation: pulse 1s infinite ease-in-out;
+    -webkit-animation: pulse 1s infinite ease-in-out;
+    border-radius: 15px;
+}
+
+.loading a,
+.loading i {
+    color: transparent !important;
+}
+
+.loading img {
+    display: none;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: rgba(165, 165, 165, .3);
+    }
+
+    50% {
+        background-color: rgba(165, 165, 165, .5);
+    }
+
+    100% {
+        background-color: rgba(165, 165, 165, .3);
+    }
+
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        background-color: rgba(165, 165, 165, .1);
+    }
+
+    50% {
+        background-color: rgba(165, 165, 165, .3);
+    }
+
+    100% {
+        background-color: rgba(165, 165, 165, .1);
+    }
+
+}
+
 .fa-language {
     position: absolute;
     margin: 0;
@@ -196,6 +247,15 @@ a:focus {
     width: 30%;
 }
 
+.p15 {
+    width: 15%;
+}
+
+.latestProjectLinks {
+    font-size: initial;
+    color: #de64a5
+}
+
 .projectLinksDiv {
     margin-top: 1em;
     display: flex;
@@ -265,4 +325,23 @@ a:focus {
     position: relative;
     width: 100%;
     background-color: #1d0033;
+}
+
+#demoImgContainer {
+    text-align: center;
+    margin: 10px 0;
+}
+
+#demoImg {
+    height: 300px;
+    border-radius: 15px;
+}
+
+#recentProjectDesc {
+    text-align: justify;
+}
+
+#latestProjectLink:hover {
+    color: #e74099;
+    text-decoration: underline;
 }
