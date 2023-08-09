@@ -24,12 +24,12 @@ export default function SkillsAndProjects() {
         <h3 className="font-fira text-xl md:text-2xl">
           Skills
         </h3>
-        <div className="p-3 font-lato flex flex-wrap justify-center gap-3">
+        <div className="p-3 w-11/12 font-lato flex flex-wrap justify-center gap-3">
           {skills.map((skill) => <SkillTag>{skill}</SkillTag>)}
         </div>
       </section>
-      <section className='flex flex-col gap-3'>
-        <h3 className="font-fira text-xl md:text-2xl">
+      <section className='flex flex-col items-center gap-3'>
+        <h3 className="font-fira text-xl md:text-2xl w-full">
           Major projects
         </h3>
         {projects.map((project) => {
