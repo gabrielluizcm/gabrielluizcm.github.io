@@ -6,7 +6,7 @@ export default function NameAndLinks() {
   return (
     <section className="flex flex-col items-center gap-4 md:gap-8">
       <img src={MyPicture} alt="My profile picture"
-        className='rounded-full w-24 h-24 border-khaki border-2' />
+        className='rounded-full w-24 h-24 md:w-32 md:h-32 border-khaki border-2' />
       <div className="flex flex-col items-center gap-4 md:gap-8">
         <div className="flex flex-col items-center">
           <h1 className="text-3xl md:text-6xl text-khaki font-fira">Gabriel Luiz</h1>

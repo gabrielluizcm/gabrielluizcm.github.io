@@ -11,6 +11,7 @@ export default {
       'lavander-indigo': '#8F43EE',
       'khaki': '#F0EB8D',
       'light-silver': '#D2D8D8',
+      'faux-black': '#0A0A0A',
     },
     fontFamily: {
       'fira': ['"Fira Code"', 'sans-serif'],
