@@ -12,6 +12,10 @@ export default {
       'khaki': '#F0EB8D',
       'light-silver': '#D2D8D8',
     },
+    fontFamily: {
+      'fira': ['"Fira Code"', 'sans-serif'],
+      'lato': ['Lato', 'arial']
+    },
     extend: {},
   },
   plugins: [],
