@@ -5,6 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
+    colors: {
+      'pine-tree': '#2D2727',
+      'onyx': '#413543',
+      'lavander-indigo': '#8F43EE',
+      'khaki': '#F0EB8D',
+      'light-silver': '#D2D8D8',
+    },
     extend: {},
   },
   plugins: [],
