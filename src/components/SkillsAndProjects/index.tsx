@@ -14,8 +14,8 @@ export default function SkillsAndProjects() {
     'Tailwind', 'Jest', 'Git', 'Docker', 'Insomnia'
   ];
   const projects = [
-    { header: 'Slowmodoro', content: 'Reverse Pomodoro technique app, with timer customization and different modes' },
-    { header: 'Musclify - WIP', content: 'Training routine app to keep track of exercises and progression' }
+    { header: 'Slowmodoro', content: 'Reverse Pomodoro technique app, with timer customization and different modes', link: 'https://slowmodoro.vercel.app/' },
+    { header: 'Musclify - WIP', content: 'Training routine app to keep track of exercises and progression', link: 'https://github.com/gabrielluizcm/musclify' }
   ];
 
   return (
@@ -34,7 +34,7 @@ export default function SkillsAndProjects() {
         </h3>
         {projects.map((project) => {
           return (
-            <ProjectCard.Root>
+            <ProjectCard.Root to={project.link}>
               <ProjectCard.Header>{project.header}</ProjectCard.Header>
               <ProjectCard.Content>{project.content}</ProjectCard.Content>
             </ProjectCard.Root>
