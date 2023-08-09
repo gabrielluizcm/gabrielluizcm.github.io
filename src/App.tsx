@@ -3,6 +3,7 @@ import BgImage from './images/texture.jpg';
 import NameAndLinks from './components/NameAndLinks';
 import AboutMe from './components/AboutMe';
 import SkillsAndProjects from './components/SkillsAndProjects';
+import InfoPopover from './components/InfoPopover';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <SkillsAndProjects />
         </div>
       </div>
+      <InfoPopover />
     </div >
   )
 }
