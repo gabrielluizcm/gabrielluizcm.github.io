@@ -39,7 +39,7 @@ export default function SkillsAndProjects() {
         <h3 className="font-fira text-xl md:text-2xl">
           {t('skillsTitle')}
         </h3>
-        <div className="p-3 w-11/12 font-lato flex flex-wrap justify-center gap-3">
+        <div className="p-3 w-full font-lato flex flex-wrap justify-center gap-3">
           {skills.map((skill, index) => <SkillTag key={index}>{skill}</SkillTag>)}
         </div>
       </section>

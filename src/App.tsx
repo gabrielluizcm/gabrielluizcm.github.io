@@ -49,7 +49,7 @@ function App() {
             <AboutMe />
           </span>
         </div>
-        <div className="bg bg-repeat h-screen w-screen md:w-1/3 p-5 flex items-center justify-center dark:text-light-silver">
+        <div className="bg bg-repeat h-full w-screen md:w-1/3 p-5 flex items-center justify-center dark:text-light-silver">
           <div className="dark:text-light-silver flex flex-col gap-5">
             <span className="md:hidden">
               <AboutMe />
