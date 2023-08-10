@@ -34,16 +34,16 @@ export default function SkillsAndProjects() {
           Skills
         </h3>
         <div className="p-3 w-11/12 font-lato flex flex-wrap justify-center gap-3">
-          {skills.map((skill) => <SkillTag>{skill}</SkillTag>)}
+          {skills.map((skill, index) => <SkillTag key={index}>{skill}</SkillTag>)}
         </div>
       </section>
       <section className='flex flex-col items-center gap-3'>
         <h3 className="font-fira text-xl md:text-2xl w-full">
           Major projects
         </h3>
-        {projects.map((project) => {
+        {projects.map((project, index) => {
           return (
-            <ProjectCard.Root to={project.link}>
+            <ProjectCard.Root key={index} to={project.link}>
               <ProjectCard.Header>{project.header}</ProjectCard.Header>
               <ProjectCard.Content>{project.content}</ProjectCard.Content>
             </ProjectCard.Root>
