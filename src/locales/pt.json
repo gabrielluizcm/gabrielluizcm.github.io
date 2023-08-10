@@ -1,0 +1,31 @@
+{
+  "subTitle": "desenvolvedor fullstack",
+  "aboutTitle": "Sobre mim",
+  "about1": {
+    "start": "Experiência em",
+    "bold1": "criação e integração de APIs",
+    "middle": "e",
+    "bold2": "desenvolvimento de UI"
+  },
+  "about2": {
+    "start": "Brasileiro, 25",
+    "strikethrough": "quase",
+    "end": "casado, apaixonado por motocicletas, jogos, e música"
+  },
+  "about3": "Amo aprender, em constante evolução.",
+  "skillsTitle": "Habilidades",
+  "projects": {
+    "title": "Projetos principais",
+    "slowmodoro": {
+      "desc": "App do método 'Pomodoro Reverso', com customização de temporizadores e diferentes modos"
+    },
+    "musclify": {
+      "title": "Musclify - Em desenvolvimento",
+      "desc": "App de rotinas de treino para acompanhar exercícios e progressão"
+    }
+  },
+  "copyrightInfo": {
+    "anchor": "Imagem de fundo por kues1",
+    "location": "no Freepik"
+  }
+}

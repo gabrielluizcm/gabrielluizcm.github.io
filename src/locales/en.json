@@ -1,0 +1,31 @@
+{
+  "subTitle": "fullstack webdev",
+  "aboutTitle": "About me",
+  "about1": {
+    "start": "Experienced with",
+    "bold1": "API creation and integration",
+    "middle": "and",
+    "bold2": "UI development"
+  },
+  "about2": {
+    "start": "Brazilian, 25",
+    "strikethrough": "almost",
+    "end": "married, passionate about motorcycles, games, and music"
+  },
+  "about3": "Love to learn, always improving.",
+  "skillsTitle": "Skills",
+  "projects": {
+    "title": "Major projects",
+    "slowmodoro": {
+      "desc": "'Reverse Pomodoro' technique app, with timer customization and different modes"
+    },
+    "musclify": {
+      "title": "Musclify - WIP",
+      "desc": "Training routine app to keep track of exercises and progression"
+    }
+  },
+  "copyrightInfo": {
+    "anchor": "Background image by kues1",
+    "location": "on Freepik"
+  }
+}

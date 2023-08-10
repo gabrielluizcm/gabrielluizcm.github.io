@@ -1,17 +1,22 @@
+import { useTranslation } from "react-i18next"
+
 export default function AboutMe() {
+  const { t } = useTranslation();
+
   return (
     <section className="md:mt-8">
       <h3 className="font-fira text-xl md:hidden">
-        About me
+        {t('aboutTitle')}
       </h3>
       <div className="p-3 font-lato flex flex-col gap-3 md:text-2xl">
-        <p>Experienced with <b>API creation and integration</b>, and <b>UI development</b>.
+        <p>
+          {t('about1.start')} <b>{t('about1.bold1')}</b>, {t('about1.middle')} <b>{t('about1.bold2')}</b>.
         </p>
         <p>
-          Brazilian, 25, <s>almost</s> married, passionate about motorcycles, games, and music.
+          {t('about2.start')} <s>{t('about2.strikethrough')}</s> {t('about2.end')}.
         </p>
         <p>
-          Love to learn, always improving.
+          {t('about3')}
         </p>
       </div>
     </section>

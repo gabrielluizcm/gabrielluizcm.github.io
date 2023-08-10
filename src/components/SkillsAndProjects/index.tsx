@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import ProjectCard from './ProjectCard';
 
 function SkillTag({ children }: { children: string }) {
@@ -12,6 +14,8 @@ function SkillTag({ children }: { children: string }) {
 }
 
 export default function SkillsAndProjects() {
+  const { t } = useTranslation();
+
   const skills = [
     'PHP', 'Node', 'SQL', 'NoSQL', 'React', 'Redux', 'TypeScript', 'Sass',
     'Tailwind', 'Jest', 'Git', 'Docker', 'Insomnia'
@@ -19,12 +23,12 @@ export default function SkillsAndProjects() {
   const projects = [
     {
       header: 'Slowmodoro',
-      content: 'Reverse Pomodoro technique app, with timer customization and different modes',
+      content: t('projects.slowmodoro.desc'),
       link: 'https://slowmodoro.vercel.app/'
     },
     {
-      header: 'Musclify - WIP',
-      content: 'Training routine app to keep track of exercises and progression',
+      header: t('projects.musclify.title'),
+      content: t('projects.musclify.desc'),
       link: 'https://github.com/gabrielluizcm/musclify'
     }
   ];
@@ -33,7 +37,7 @@ export default function SkillsAndProjects() {
     <>
       <section>
         <h3 className="font-fira text-xl md:text-2xl">
-          Skills
+          {t('skillsTitle')}
         </h3>
         <div className="p-3 w-11/12 font-lato flex flex-wrap justify-center gap-3">
           {skills.map((skill, index) => <SkillTag key={index}>{skill}</SkillTag>)}
@@ -41,7 +45,7 @@ export default function SkillsAndProjects() {
       </section>
       <section className='flex flex-col items-center gap-3'>
         <h3 className="font-fira text-xl md:text-2xl w-full">
-          Major projects
+          {t('projects.title')}
         </h3>
         {projects.map((project, index) => {
           return (

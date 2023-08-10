@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+
+import i18nRoot from './i18n';
 
 import BgTexture from './images/texture.png';
 
@@ -7,20 +10,32 @@ import AboutMe from './components/AboutMe';
 import SkillsAndProjects from './components/SkillsAndProjects';
 import InfoPopover from './components/InfoPopover';
 import DarkModeSwitch from './components/DarkModeSwitch';
+import LanguageSwitch from './components/LanguageSwitch';
 
 function App() {
+  const { i18n } = useTranslation();
   const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
     const preferredMode = localStorage.getItem('darkMode');
     if (preferredMode)
       setIsDark(preferredMode === 'true');
+
+    const preferredLang = localStorage.getItem('lang');
+    if (preferredLang)
+      i18nRoot.changeLanguage(preferredLang);
   }, []);
 
   function handleDarkModeSwitchClick() {
     const newIsDark = !isDark;
     localStorage.setItem('darkMode', `${newIsDark}`);
     setIsDark(newIsDark);
+  }
+
+  function handleLanguageSwitchClick() {
+    const newLang = i18n.language === 'en' ? 'pt' : 'en';
+    i18nRoot.changeLanguage(newLang);
+    localStorage.setItem('lang', newLang);
   }
 
   return (
@@ -42,8 +57,12 @@ function App() {
             <SkillsAndProjects />
           </div>
         </div>
-        <InfoPopover />
-        <DarkModeSwitch isDark={isDark} onClick={handleDarkModeSwitchClick} />
+        <div className="absolute top-2 right-2 flex gap-3 items-center">
+          <InfoPopover />
+          <DarkModeSwitch isDark={isDark} onClick={handleDarkModeSwitchClick} />
+          <LanguageSwitch lang={i18n.language} onClick={handleLanguageSwitchClick} />
+        </div>
+
       </div >
     </div>
   )

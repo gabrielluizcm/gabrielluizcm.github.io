@@ -43,7 +43,7 @@ export default function DarkModeSwitch({ isDark, onClick }: DarkModeSwitch) {
       width="24"
       height="24"
       viewBox="0 0 24 24"
-      className='stroke-deep-purple dark:stroke-khaki absolute right-5 top-5'
+      className='stroke-deep-purple dark:stroke-khaki'
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
