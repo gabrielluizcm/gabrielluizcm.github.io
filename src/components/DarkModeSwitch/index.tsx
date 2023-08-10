@@ -44,9 +44,9 @@ export default function DarkModeSwitch({ isDark, onClick }: DarkModeSwitch) {
       height="24"
       viewBox="0 0 24 24"
       className='stroke-deep-purple dark:stroke-khaki absolute right-5 top-5'
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       style={{ ...svgContainerProps, cursor: "pointer" }}
       onClick={onClick}
     >
