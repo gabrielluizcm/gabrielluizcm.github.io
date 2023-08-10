@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import i18nRoot from './i18n';
 
-import BgTexture from './images/texture.png';
+import BgTexture from './images/texture.webp';
 
 import NameAndLinks from './components/NameAndLinks';
 import AboutMe from './components/AboutMe';
@@ -49,7 +49,7 @@ function App() {
             <AboutMe />
           </span>
         </div>
-        <div className="bg bg-repeat h-full w-screen md:w-1/3 p-5 flex items-center justify-center dark:text-light-silver">
+        <div className="bg bg-repeat h-full md:h-screen w-screen md:w-1/3 p-5 flex items-center justify-center dark:text-light-silver">
           <div className="dark:text-light-silver flex flex-col gap-5">
             <span className="md:hidden">
               <AboutMe />

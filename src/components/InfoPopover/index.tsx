@@ -28,7 +28,7 @@ export default function InfoPopover() {
                   dark:text-onyx dark:hover:text-lavander-indigo underline'
                 href="https://www.freepik.com/free-photo/paper-texture_1034617.htm#query=paper%20texture&position=11&from_view=search&track=ais"
                 target='_blank'
-                rel='nofollow'>
+                rel="noopener">
                 {t('copyrightInfo.anchor')}
               </a> {t('copyrightInfo.location')}
             </Popover.Panel>

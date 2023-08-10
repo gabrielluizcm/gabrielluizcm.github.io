@@ -1,7 +1,7 @@
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
-import MyPicture from '../../images/picture.jpg';
+import MyPicture from '../../images/picture.webp';
 
 type LinkAnchorProps = {
   to: string,
@@ -10,18 +10,18 @@ type LinkAnchorProps = {
 
 function LinkAnchor({ to, Icon }: LinkAnchorProps) {
   return (
-    <a href={to} target="_blank">
+    <a href={to} target="_blank" rel="noopener" >
       <Icon className="w-8 h-8 hover:text-dark-purple dark:hover:text-khaki" />
     </a>
   )
 }
 
 export default function NameAndLinks() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <section className="flex flex-col items-center gap-4 md:gap-8">
-      <img src={MyPicture} alt="My profile picture"
+      <img src={MyPicture} alt={i18n.language === 'en' ? 'My profile picture' : 'Minha foto de perfil'}
         className='rounded-full w-24 h-24 md:w-32 md:h-32 border-dark-purple dark:border-khaki border-2' />
       <div className="flex flex-col items-center gap-4 md:gap-4">
         <div className="flex flex-col items-center">
