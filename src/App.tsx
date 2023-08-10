@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import BgTexture from './images/texture.png';
 
@@ -10,6 +10,19 @@ import DarkModeSwitch from './components/DarkModeSwitch';
 
 function App() {
   const [isDark, setIsDark] = useState(true);
+
+  useEffect(() => {
+    const preferredMode = localStorage.getItem('darkMode');
+    if (preferredMode)
+      setIsDark(preferredMode === 'true');
+  }, []);
+
+  function handleDarkModeSwitchClick() {
+    const newIsDark = !isDark;
+    localStorage.setItem('darkMode', `${newIsDark}`);
+    setIsDark(newIsDark);
+  }
+
   return (
     <div className={isDark ? 'dark' : ''}>
       <div
@@ -30,7 +43,7 @@ function App() {
           </div>
         </div>
         <InfoPopover />
-        <DarkModeSwitch isDark={isDark} onClick={() => setIsDark(!isDark)} />
+        <DarkModeSwitch isDark={isDark} onClick={handleDarkModeSwitchClick} />
       </div >
     </div>
   )
