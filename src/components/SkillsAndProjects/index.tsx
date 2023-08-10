@@ -2,8 +2,10 @@ import ProjectCard from './ProjectCard';
 
 function SkillTag({ children }: { children: string }) {
   return (
-    <span className="px-3 py-2 font-lato text-base dark:bg-onyx
-    dark:hover:bg-lavander-indigo cursor-pointer transition-colors rounded-md">
+    <span className="px-3 py-2 font-lato text-base
+      bg-lavander hover:bg-deep-purple
+      dark:bg-onyx dark:hover:bg-lavander-indigo
+      cursor-pointer transition-colors rounded-md">
       {children}
     </span>
   )
