@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}"
   ],
+  darkMode: 'class',
   theme: {
     colors: {
       'pine-tree': '#2D2727',

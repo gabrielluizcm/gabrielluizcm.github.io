@@ -7,7 +7,7 @@ export default function InfoPopover() {
       {({ open }) => (
         <>
           <Popover.Button className='absolute top-0 right-0 z-10  active:outline-none'>
-            <FaInfoCircle size={24} className={open ? 'text-lavander-indigo' : 'text-light-silver'} />
+            <FaInfoCircle size={24} className={open ? 'dark:text-lavander-indigo' : 'dark:text-light-silver'} />
           </Popover.Button>
 
           <Transition
