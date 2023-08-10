@@ -2,7 +2,8 @@ import ProjectCard from './ProjectCard';
 
 function SkillTag({ children }: { children: string }) {
   return (
-    <span className="px-3 py-2 font-lato text-base dark:bg-onyx rounded-md">
+    <span className="px-3 py-2 font-lato text-base dark:bg-onyx
+    dark:hover:bg-lavander-indigo cursor-pointer transition-colors rounded-md">
       {children}
     </span>
   )
@@ -14,8 +15,16 @@ export default function SkillsAndProjects() {
     'Tailwind', 'Jest', 'Git', 'Docker', 'Insomnia'
   ];
   const projects = [
-    { header: 'Slowmodoro', content: 'Reverse Pomodoro technique app, with timer customization and different modes', link: 'https://slowmodoro.vercel.app/' },
-    { header: 'Musclify - WIP', content: 'Training routine app to keep track of exercises and progression', link: 'https://github.com/gabrielluizcm/musclify' }
+    {
+      header: 'Slowmodoro',
+      content: 'Reverse Pomodoro technique app, with timer customization and different modes',
+      link: 'https://slowmodoro.vercel.app/'
+    },
+    {
+      header: 'Musclify - WIP',
+      content: 'Training routine app to keep track of exercises and progression',
+      link: 'https://github.com/gabrielluizcm/musclify'
+    }
   ];
 
   return (
