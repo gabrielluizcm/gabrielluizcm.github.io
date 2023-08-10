@@ -13,13 +13,13 @@ export default function NameAndLinks() {
           <h2 className="text-2xl md:text-4xl text-light-silver font-lato">fullstack webdev</h2>
         </div>
         <div className="flex gap-6">
-          <a href="https://github.com/gabrielluizcm" target='_blank' rel='no-referrer'>
+          <a href="https://github.com/gabrielluizcm" target='_blank'>
             <FaGithub className="w-8 h-8 hover:text-khaki" />
           </a>
-          <a href="https://linkedin.com/in/gabrielluizcm" target='_blank' rel='no-referrer'>
+          <a href="https://linkedin.com/in/gabrielluizcm" target='_blank'>
             <FaLinkedin className="w-8 h-8 hover:text-khaki" />
           </a>
-          <a href="https://instagram.com/naooanjo" target='_blank' rel='no-referrer'>
+          <a href="https://instagram.com/naooanjo" target='_blank'>
             <FaInstagram className="w-8 h-8 hover:text-khaki" />
           </a>
         </div>
