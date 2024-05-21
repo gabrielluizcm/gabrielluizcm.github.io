@@ -27,9 +27,9 @@ export default function SkillsAndProjects() {
       link: 'https://slowmodoro.vercel.app/'
     },
     {
-      header: t('projects.musclify.title'),
-      content: t('projects.musclify.desc'),
-      link: 'https://github.com/gabrielluizcm/musclify'
+      header: 'Protein Tracker',
+      content: t('projects.protein.desc'),
+      link: 'https://proteintracker.vercel.app/'
     }
   ];
 

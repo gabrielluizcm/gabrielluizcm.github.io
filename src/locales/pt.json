@@ -8,7 +8,7 @@
     "bold2": "desenvolvimento de UI"
   },
   "about2": {
-    "start": "Brasileiro, 25,",
+    "start": "Brasileiro, 26,",
     "strikethrough": "quase",
     "end": "casado, apaixonado por motocicletas, jogos, e música"
   },
@@ -19,9 +19,8 @@
     "slowmodoro": {
       "desc": "App do método 'Pomodoro Reverso', com customização de temporizadores e diferentes modos"
     },
-    "musclify": {
-      "title": "Musclify - Em desenvolvimento",
-      "desc": "App de rotinas de treino para acompanhar exercícios e progressão"
+    "protein": {
+      "desc": "Contador de proteínas para uso diário"
     }
   },
   "copyrightInfo": {
