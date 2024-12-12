@@ -17,7 +17,7 @@ export default function SkillsAndProjects() {
   const { t } = useTranslation();
 
   const skills = [
-    'PHP', 'Node', 'SQL', 'NoSQL', 'Vue', 'React', 'Redux', 'TypeScript', 'Sass',
+    'PHP', 'Laravel', 'Symfony', 'Node', 'SQL', 'NoSQL', 'Vue', 'React', 'Redux', 'TypeScript', 'Sass',
     'Tailwind', 'Jest', 'Git', 'Docker', 'Insomnia'
   ];
   const projects = [
